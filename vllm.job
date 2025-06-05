@@ -17,5 +17,6 @@ cd $VLLMHOME
 
 
 echo '===================START===================' 
-OMP_NUM_THREADS=16 python $VLLMHOME/run.py 2>&1 $VLLMHOME/vllm_run.log
- echo '====================END====================' 
+#OMP_NUM_THREADS=16 python $VLLMHOME/run.py 2>&1 $VLLMHOME/vllm_run.log
+python $VLLMHOME/run.py 2>&1 $VLLMHOME/vllm_run.log
+echo '====================END====================' 
