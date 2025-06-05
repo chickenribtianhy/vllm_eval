@@ -59,12 +59,12 @@ def benchmark(model_name, prompt_len, gen_len, batch_size):
  
     llm = LLM(model=model_name,
                 tensor_parallel_size=num_gpus,
-                gpu_memory_utilization=0.90,
+                gpu_memory_utilization=0.70,
                 max_num_batched_tokens=4096,
                 max_num_seqs=32,
                 disable_log_stats=False,
                 swap_space=50,
-                cpu_offload_gb=50.0,
+                cpu_offload_gb=100.0,
                 preemption_mode="swap",
                 dtype="float16")
  

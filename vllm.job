@@ -3,8 +3,8 @@
 #SBATCH -p GPU-shared
 #SBATCH -t 3:30:00 
 #SBATCH --gpus=v100-16:2
-#SBATCH --output=output.txt 
-#SBATCH --error=err.txt 
+#SBATCH --output=output2.txt 
+#SBATCH --error=err2.txt 
  
 set -x 
  
