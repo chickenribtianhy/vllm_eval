@@ -1,4 +1,0 @@
-/ocean/projects/cis250117p/htian1/miniconda3/envs/vllm/bin/python
-===================START===================
-python: can't open file '/ocean/projects/cis250117p/htian1/vllm/run.py': [Errno 2] No such file or directory
-====================END====================
