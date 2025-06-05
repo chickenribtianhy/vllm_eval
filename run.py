@@ -21,7 +21,7 @@ gen_lengths = [128]
 batch_sizes = [1]
  
 # models = ["facebook/opt-1.3b", "facebook/opt-13b", "facebook/opt-30b"]
-models = ["facebook/opt-1.3b"]
+models = ["facebook/opt-125m"]
  
 base_prompt = "Paris is the capital of "
  
@@ -59,12 +59,12 @@ def benchmark(model_name, prompt_len, gen_len, batch_size):
  
     llm = LLM(model=model_name,
                 tensor_parallel_size=num_gpus,
-                gpu_memory_utilization=0.70,
+                gpu_memory_utilization=0.10,
                 max_num_batched_tokens=4096,
                 max_num_seqs=32,
                 disable_log_stats=False,
                 swap_space=50,
-                cpu_offload_gb=100.0,
+                cpu_offload_gb=50.0,
                 preemption_mode="swap",
                 dtype="float16")
  

@@ -1,0 +1,10 @@
++ conda activate vllm
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate vllm
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='[\u@\h \W]\$ '
+++ __conda_exe shell.posix activate vllm
+++ '[' -n '' ']'
+++ /ocean/projects/cis250117p/htian1/miniconda3/bin/conda shell.posix activate vllm
