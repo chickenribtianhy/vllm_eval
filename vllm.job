@@ -15,10 +15,10 @@ export HUGGINGFACE_HUB_CACHE=$PROJECT/.cache/huggingface
 $VLLMHOME=$PROJECT/vllm/vllmevaluation
 cd $VLLMHOME
 
-which python
+# which python
 echo '===================START===================' 
 
 
-OMP_NUM_THREADS=16 python run.py 2>&1 $VLLMHOME/vllm_run.log
+OMP_NUM_THREADS=16 python $VLLMHOME/run.py 2>&1 $VLLMHOME/vllm_run.log
  
 echo '====================END====================' 
