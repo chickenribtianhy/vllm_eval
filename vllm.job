@@ -12,12 +12,13 @@ set -x
 conda activate vllm
 export HUGGINGFACE_HUB_CACHE=$PROJECT/.cache/huggingface 
 
-cd $PROJECT/vllm
+$VLLMHOME=$PROJECT/vllm/vllmevaluation
+cd $VLLMHOME
 
 which python
 echo '===================START===================' 
 
 
-OMP_NUM_THREADS=16 python run.py 2>&1 vllm_run.log
+OMP_NUM_THREADS=16 python run.py 2>&1 $VLLMHOME/vllm_run.log
  
 echo '====================END====================' 
