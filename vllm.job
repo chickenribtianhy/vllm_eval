@@ -1,0 +1,23 @@
+#!/bin/bash -l 
+#SBATCH -N 1 
+#SBATCH -p GPU 
+#SBATCH -t 2:30:00 
+#SBATCH --gpus=v100-16:2
+#SBATCH --output=output.txt 
+#SBATCH --error=err.txt 
+ 
+set -x 
+ 
+ 
+conda activate vllm
+export HUGGINGFACE_HUB_CACHE=$PROJECT/.cache/huggingface 
+
+cd $PROJECT/vllm
+
+which python
+echo '===================START===================' 
+
+
+OMP_NUM_THREADS=16 python run.py 2>&1 vllm_run.log
+ 
+echo '====================END====================' 
