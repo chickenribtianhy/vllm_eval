@@ -8,12 +8,20 @@ from transformers import AutoTokenizer
 from datetime import datetime
 from contextlib import redirect_stdout, redirect_stderr
  
+
+os.environ["VLLM_USE_V1"] = "0"
+# os.environ["VLLMHOME"] = "$PROJECT/vllm/vllmevaluation"
+
+# prompt_lengths = [128, 1024, 2048]
+# gen_lengths = [128, 512, 1024, 2048]
+# batch_sizes = [1, 4, 8, 16, 32]
+
+prompt_lengths = [128]
+gen_lengths = [128]
+batch_sizes = [1]
  
-prompt_lengths = [128, 1024, 2048]
-gen_lengths = [128, 512, 1024, 2048]
-batch_sizes = [1, 4, 8, 16, 32]
- 
-models = ["facebook/opt-1.3b", "facebook/opt-13b", "facebook/opt-30b"]
+# models = ["facebook/opt-1.3b", "facebook/opt-13b", "facebook/opt-30b"]
+models = ["facebook/opt-1.3b"]
  
 base_prompt = "Paris is the capital of "
  
@@ -56,7 +64,7 @@ def benchmark(model_name, prompt_len, gen_len, batch_size):
                 max_num_seqs=32,
                 disable_log_stats=False,
                 swap_space=50,
-                cpu_offload_gb=20.0,
+                cpu_offload_gb=50.0,
                 preemption_mode="swap",
                 dtype="float16")
  
