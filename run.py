@@ -63,7 +63,7 @@ def benchmark(model_name, prompt_len, gen_len, batch_size):
                 max_num_batched_tokens=4096,
                 max_num_seqs=32,
                 disable_log_stats=False,
-                swap_space=50,
+                swap_space=25,
                 cpu_offload_gb=50.0,
                 preemption_mode="swap",
                 dtype="float16")
