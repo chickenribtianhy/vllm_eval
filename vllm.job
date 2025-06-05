@@ -2,7 +2,7 @@
 #SBATCH -N 1 
 #SBATCH -p GPU 
 #SBATCH -t 2:30:00 
-#SBATCH --gpus=v100-16:2
+#SBATCH --gpus=v100-16:8
 #SBATCH --output=output.txt 
 #SBATCH --error=err.txt 
  
