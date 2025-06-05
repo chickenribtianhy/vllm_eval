@@ -51,13 +51,12 @@ export CONDA_PYTHON_EXE='\''/ocean/projects/cis250117p/htian1/miniconda3/bin/pyt
 + hash -r
 + export HUGGINGFACE_HUB_CACHE=/ocean/projects/cis250117p/htian1/.cache/huggingface
 + HUGGINGFACE_HUB_CACHE=/ocean/projects/cis250117p/htian1/.cache/huggingface
-+ cd /ocean/projects/cis250117p/htian1/vllm
-+ which python
-+ alias
-+ eval declare -f
-++ declare -f
-+ /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot python
++ export VLLMHOME=/ocean/projects/cis250117p/htian1/vllm/vllmevaluation
++ VLLMHOME=/ocean/projects/cis250117p/htian1/vllm/vllmevaluation
++ cd /ocean/projects/cis250117p/htian1/vllm/vllmevaluation
 + echo ===================START===================
 + OMP_NUM_THREADS=16
-+ python run.py vllm_run.log
++ python /ocean/projects/cis250117p/htian1/vllm/vllmevaluation/run.py /ocean/projects/cis250117p/htian1/vllm/vllmevaluation/vllm_run.log
+/var/spool/slurm/d/job32718046/slurm_script: line 22: 43102 Killed                  OMP_NUM_THREADS=16 python $VLLMHOME/run.py $VLLMHOME/vllm_run.log 2>&1
 + echo ====================END====================
+slurmstepd: error: Detected 2 oom-kill event(s) in StepId=32718046.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
