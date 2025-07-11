@@ -1,0 +1,169 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 1024, Gen Len: 1024, Batch Size: 1
+Start time: 2025-07-11 08:14:18.907889
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 631.48it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:22<00:00, 22.24s/it, est. speed input: 46.04 toks/s, output: 46.04 toks/s]Processed prompts: 100%|██████████| 1/1 [00:22<00:00, 22.24s/it, est. speed input: 46.04 toks/s, output: 46.04 toks/s]
+
+Runtime: 22.245927321 seconds
+Total throughput: 92.06179497254249 tokens/sec
+Generation throughput: 46.03089748627124 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 5467.472170418395 tokens/s
+Decode throughput: 46.4717723003882 tokens/s
+Average TTFT: 0.1892843246459961 s
+Average TPOT: 0.021539473696771137 s
+
+total prefill time: 0.18728947639465332 
+total decode time: 22.034881591796875 
+===================================
+
+1
+RequestMetrics(arrival_time=1752221658.9083126, last_token_time=1752221681.1324785, first_scheduled_time=1752221658.9103074, first_token_time=1752221659.097597, time_in_queue=0.0019948482513427734, finished_time=1752221681.1327786, scheduler_time=0.07585109599995121, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[0]:  amI'mI'mI'mI'ms is that'ssad
+ am
+ am
+ am
+ am
+ am I'm is that'ss
+ am
+ am I'm
+ am
+ am I'mI'mI'mGAT&I'm is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is thisI'ms
+I'ms
+ am I'ms
+ am I'ms
+ am I'ms
+I'm
+
+Haha,
+
+Haha,
+Haha,
+,
+
+Haha,
+ am I'ms
+ am I'ms
+ am I'ms
+ am I'ms
+
+
+Haha,
+,
+,
+Haha,
+!I'm I'ms
+
+
+Haha,
+,
+ am I'm I'm I'm I'm I'm I'm I'm I'm I'm not sure,
+
+
+
+ am I'm I'ms)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+iShares
+
+
+
+
+
+
+
+
+
+
+
+I'ms
+I'm I'm I'm the
+
+
+
+
+
+I'm-
+
+
+I'm I'm I'm I'm I'm I'm not sure,
+
+
+I'm I'm not,
+
+
+
+
+
+
+
+
+I'm not,
+
+
+I'm I'm I'm I'm I'm I'm I'm I'm I'm I'm I'm not,
+
+I'm I'm I'm I'm I'm I'm not, I'm not sure,
+
+I'm not, I'm not, I'm I'm I'm not a) I'm not:
+
+I'm not, I'm the only I'm not, I'm not sure, I'm not, I'm not a lot, I'm notH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,,,Tried a lot              
+
+s
+
+
+
+
+s
+
+  is that's
+  is   is  is this is a lot
+               I'm  don't know         don't know I'm not          I          't  not    I'm     't         I'm      't is that's't is that's't is that,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,    I  not     ooh, you                                                                                                                                                                                                                                                                                                                                          
+
+generation token length: 1024

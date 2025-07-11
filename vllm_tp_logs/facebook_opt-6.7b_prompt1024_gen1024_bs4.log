@@ -1,0 +1,269 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 1024, Gen Len: 1024, Batch Size: 4
+Start time: 2025-07-11 08:15:59.813348
+
+Adding requests:   0%|          | 0/4 [00:00<?, ?it/s]Adding requests: 100%|██████████| 4/4 [00:00<00:00, 780.59it/s]
+Processed prompts:   0%|          | 0/4 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  25%|██▌       | 1/4 [00:22<01:08, 22.86s/it, est. speed input: 44.79 toks/s, output: 44.79 toks/s]Processed prompts:  50%|█████     | 2/4 [00:38<00:37, 18.69s/it, est. speed input: 53.01 toks/s, output: 53.01 toks/s]Processed prompts:  75%|███████▌  | 3/4 [00:57<00:18, 18.96s/it, est. speed input: 53.04 toks/s, output: 53.04 toks/s]Processed prompts: 100%|██████████| 4/4 [01:14<00:00, 18.20s/it, est. speed input: 54.64 toks/s, output: 54.64 toks/s]Processed prompts: 100%|██████████| 4/4 [01:14<00:00, 18.74s/it, est. speed input: 54.64 toks/s, output: 54.64 toks/s]
+
+Runtime: 74.963807423 seconds
+Total throughput: 109.27940137531697 tokens/sec
+Generation throughput: 54.63970068765848 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 105.18228997401023 tokens/s
+Decode throughput: 54.92478782381714 tokens/s
+Average TTFT: 15.714259445667267 s
+Average TPOT: 0.032121327673817895 s
+
+total prefill time: 38.941916942596436 
+total decode time: 74.57470774650574 
+===================================
+
+4
+RequestMetrics(arrival_time=1752221759.8137522, last_token_time=1752221782.6588185, first_scheduled_time=1752221759.8194056, first_token_time=1752221760.1812465, time_in_queue=0.00565338134765625, finished_time=1752221782.659113, scheduler_time=0.10452157600366263, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221759.8152454, last_token_time=1752221798.4340882, first_scheduled_time=1752221759.8194056, first_token_time=1752221760.1812465, time_in_queue=0.004160165786743164, finished_time=1752221798.434348, scheduler_time=0.11243626300029064, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221759.816391, last_token_time=1752221817.7115738, first_scheduled_time=1752221782.8138225, first_token_time=1752221782.9961464, time_in_queue=22.99743151664734, finished_time=1752221817.7118182, scheduler_time=0.11175888799925815, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221759.8175356, last_token_time=1752221834.7559543, first_scheduled_time=1752221798.5785234, first_token_time=1752221798.7613225, time_in_queue=38.760987758636475, finished_time=1752221834.7561963, scheduler_time=0.08925696300730124, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[3]:  amI'mI'mI'mI'ms is that'ssad
+ am
+ am
+ am
+ am
+ am I'm is that'ss
+ am
+ am I'm
+ am
+ am I'mI'mI'mGAT&I'm is this is this is this is thisI'mI'm
+ you have is this is this is this is this is this is this is this is this is this is this is this is this is this
+I'm
+I'm
+ you is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is thiss
+
+
+Haha,
+
+
+Haha,
+I'm I'ms
+
+
+
+ am I'ms
+
+I'msad
+
+I'm I'm I'ms
+I'm I'ms
+
+
+
+
+
+
+
+ am I'm I'm I'm I'ms
+I'manonymous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I'ms
+
+
+
+
+
+I'm not sure,
+
+
+
+
+I'm I'm I'm I'm I'm I'm I'm I'm:
+
+
+
+
+
+
+
+
+
+
+
+I'm I'm I'm I'm not sure,
+
+
+
+
+
+
+I'm the only
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I'm I'm I'm the
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I'm:
+
+
+
+
+
+
+
+
+I'm:
+
+
+I'm the only,
+ you,
+
+
+
+:. I'm the
+
+
+
+:: I:), I'm not, I'm not, I'm not, I'm not, I'm not,
+
+
+
+
+
+
+
+
+
+ I'm ,
+
+
+ I'm not, I'm not, I'm not, I'm not,
+
+ I'm the title,      I'm not, I'm not, I'm not,
+
+
+
+
+,, is,,
+
+
+,
+
+,
+
+ is, is, is the
+
+s,,
+
+,,,,,
+
+     I is  is  is  is is is a lot of,
+                                                                                                         I'm                 I'm                       I'm                                                                                                                                                                                                                                                                                      
+
+generation token length: 1024

@@ -1,0 +1,43 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 128, Gen Len: 128, Batch Size: 1
+Start time: 2025-07-07 10:38:19.621769
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 1229.28it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.71s/it, est. speed input: 47.18 toks/s, output: 47.18 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.71s/it, est. speed input: 47.18 toks/s, output: 47.18 toks/s]
+
+Runtime: 2.714879077 seconds
+Total throughput: 94.29517585840658 tokens/sec
+Generation throughput: 47.14758792920329 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 2840.722108460191 tokens/s
+Decode throughput: 48.3401660924479 tokens/s
+Average TTFT: 0.04627180099487305 s
+Average TPOT: 0.020849618386095902 s
+
+total prefill time: 0.0450589656829834 
+total decode time: 2.6479015350341797 
+===================================
+
+1
+RequestMetrics(arrival_time=1751884699.6221757, last_token_time=1751884702.316349, first_scheduled_time=1751884699.6233885, first_token_time=1751884699.6684475, time_in_queue=0.0012128353118896484, finished_time=1751884702.3165603, scheduler_time=0.01003208499696484, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[0]: U. .I'msU.
+
+I'msadidas
+I'msadidas
+I'msadidasooh my friend,
+
+ am I'msounds like
+
+“I'msounds like
+
+sounds like
+
+sounds like
+
+ is a lot of the only, I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure if you can't think it's a lot of people are you can't know what you can't be a lot of people are going to be a fan of 
+
+generation token length: 128

@@ -1,0 +1,93 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 128, Gen Len: 512, Batch Size: 32
+Start time: 2025-07-07 10:50:45.282501
+
+Adding requests:   0%|          | 0/32 [00:00<?, ?it/s]Adding requests: 100%|██████████| 32/32 [00:00<00:00, 3239.39it/s]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   3%|▎         | 1/32 [00:13<06:50, 13.25s/it, est. speed input: 9.66 toks/s, output: 38.64 toks/s]Processed prompts:  16%|█▌        | 5/32 [00:22<01:47,  3.99s/it, est. speed input: 28.17 toks/s, output: 112.69 toks/s]Processed prompts:  19%|█▉        | 6/32 [00:23<01:22,  3.17s/it, est. speed input: 33.14 toks/s, output: 132.55 toks/s]Processed prompts:  22%|██▏       | 7/32 [00:23<01:01,  2.48s/it, est. speed input: 37.99 toks/s, output: 151.95 toks/s]Processed prompts:  25%|██▌       | 8/32 [00:25<00:55,  2.33s/it, est. speed input: 40.15 toks/s, output: 160.59 toks/s]Processed prompts:  28%|██▊       | 9/32 [00:25<00:39,  1.73s/it, est. speed input: 44.92 toks/s, output: 179.69 toks/s]Processed prompts:  31%|███▏      | 10/32 [00:30<00:56,  2.58s/it, est. speed input: 42.10 toks/s, output: 168.41 toks/s]Processed prompts:  34%|███▍      | 11/32 [00:32<00:50,  2.42s/it, est. speed input: 43.43 toks/s, output: 173.73 toks/s]Processed prompts:  38%|███▊      | 12/32 [00:32<00:36,  1.84s/it, est. speed input: 46.75 toks/s, output: 187.00 toks/s]Processed prompts:  41%|████      | 13/32 [00:34<00:31,  1.66s/it, est. speed input: 48.83 toks/s, output: 195.33 toks/s]Processed prompts:  44%|████▍     | 14/32 [00:34<00:23,  1.29s/it, est. speed input: 51.96 toks/s, output: 207.83 toks/s]Processed prompts:  47%|████▋     | 15/32 [00:36<00:25,  1.48s/it, est. speed input: 52.72 toks/s, output: 210.89 toks/s]Processed prompts:  50%|█████     | 16/32 [00:37<00:20,  1.27s/it, est. speed input: 55.08 toks/s, output: 220.34 toks/s]Processed prompts:  53%|█████▎    | 17/32 [00:38<00:20,  1.34s/it, est. speed input: 56.24 toks/s, output: 224.95 toks/s]Processed prompts:  56%|█████▋    | 18/32 [00:39<00:16,  1.20s/it, est. speed input: 58.22 toks/s, output: 232.87 toks/s]Processed prompts:  59%|█████▉    | 19/32 [00:39<00:11,  1.08it/s, est. speed input: 61.04 toks/s, output: 244.17 toks/s]Processed prompts:  62%|██████▎   | 20/32 [00:42<00:18,  1.52s/it, est. speed input: 59.88 toks/s, output: 239.50 toks/s]Processed prompts:  66%|██████▌   | 21/32 [00:46<00:23,  2.11s/it, est. speed input: 58.14 toks/s, output: 232.56 toks/s]Processed prompts:  69%|██████▉   | 22/32 [00:50<00:28,  2.88s/it, est. speed input: 55.29 toks/s, output: 221.15 toks/s]Processed prompts:  72%|███████▏  | 23/32 [00:51<00:19,  2.22s/it, est. speed input: 57.06 toks/s, output: 228.26 toks/s]Processed prompts:  75%|███████▌  | 24/32 [00:51<00:12,  1.60s/it, est. speed input: 59.37 toks/s, output: 237.47 toks/s]Processed prompts:  78%|███████▊  | 25/32 [00:52<00:09,  1.30s/it, est. speed input: 61.14 toks/s, output: 244.57 toks/s]Processed prompts:  81%|████████▏ | 26/32 [00:57<00:14,  2.37s/it, est. speed input: 58.15 toks/s, output: 232.62 toks/s]Processed prompts:  84%|████████▍ | 27/32 [01:00<00:12,  2.56s/it, est. speed input: 57.38 toks/s, output: 229.51 toks/s]Processed prompts:  88%|████████▊ | 28/32 [01:00<00:07,  1.93s/it, est. speed input: 59.07 toks/s, output: 236.28 toks/s]Processed prompts:  91%|█████████ | 29/32 [01:01<00:04,  1.66s/it, est. speed input: 60.15 toks/s, output: 240.62 toks/s]Processed prompts:  94%|█████████▍| 30/32 [01:01<00:02,  1.19s/it, est. speed input: 62.12 toks/s, output: 248.46 toks/s]Processed prompts: 100%|██████████| 32/32 [01:05<00:00,  1.49s/it, est. speed input: 62.54 toks/s, output: 250.17 toks/s]Processed prompts: 100%|██████████| 32/32 [01:05<00:00,  2.05s/it, est. speed input: 62.54 toks/s, output: 250.17 toks/s]
+
+Runtime: 65.503323475 seconds
+Total throughput: 312.65589154138337 tokens/sec
+Generation throughput: 250.1247132331067 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 102.47342419188591 tokens/s
+Decode throughput: 252.06775440624264 tokens/s
+Average TTFT: 15.16624717876829 s
+Average TPOT: 0.04819358625153923 s
+
+total prefill time: 39.97133922576904 
+total decode time: 64.9983971118927 
+===================================
+
+32
+RequestMetrics(arrival_time=1751885445.2828987, last_token_time=1751885458.5202844, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.010760784149169922, finished_time=1751885458.5206876, scheduler_time=0.12999620002483425, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2835417, last_token_time=1751885458.5202844, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.010117769241333008, finished_time=1751885458.5207353, scheduler_time=0.12999620002483425, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2839174, last_token_time=1751885458.5202844, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.009742021560668945, finished_time=1751885458.5207613, scheduler_time=0.12999620002483425, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2842412, last_token_time=1751885458.5202844, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.009418249130249023, finished_time=1751885458.5207858, scheduler_time=0.12999620002483425, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2845278, last_token_time=1751885470.7777023, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.009131669998168945, finished_time=1751885470.7779226, scheduler_time=0.13835135102272034, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2848039, last_token_time=1751885481.688733, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.008855581283569336, finished_time=1751885481.688941, scheduler_time=0.13918661400748533, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2851207, last_token_time=1751885483.9642441, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.00853872299194336, finished_time=1751885483.9644647, scheduler_time=0.14537518001270655, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2853982, last_token_time=1751885475.6722186, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.00826120376586914, finished_time=1751885475.6724463, scheduler_time=0.15959395599202253, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2856693, last_token_time=1751885479.3466852, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.007990121841430664, finished_time=1751885479.3469186, scheduler_time=0.14513764899675152, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2859418, last_token_time=1751885467.987794, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.007717609405517578, finished_time=1751885467.9880285, scheduler_time=0.1426859770053852, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.286237, last_token_time=1751885468.4479017, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.007422447204589844, finished_time=1751885468.448146, scheduler_time=0.14292375000513857, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.286503, last_token_time=1751885468.858384, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.0071563720703125, finished_time=1751885468.858609, scheduler_time=0.14348304301347525, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2867727, last_token_time=1751885478.1268253, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.006886720657348633, finished_time=1751885478.1270585, scheduler_time=0.14710994100096286, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2870395, last_token_time=1751885477.6895857, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.006619930267333984, finished_time=1751885477.689816, scheduler_time=0.1371228300013172, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2873, last_token_time=1751885491.503483, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.0063593387603759766, finished_time=1751885491.5037353, scheduler_time=0.14893867800674343, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2875776, last_token_time=1751885488.0266242, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.006081819534301758, finished_time=1751885488.0268862, scheduler_time=0.13998110100146732, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2878435, last_token_time=1751885485.1108947, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.005815982818603516, finished_time=1751885485.1111913, scheduler_time=0.14605730299263087, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2881608, last_token_time=1751885482.4505522, first_scheduled_time=1751885445.2936594, first_token_time=1751885445.766752, time_in_queue=0.005498647689819336, finished_time=1751885482.450767, scheduler_time=0.139572086993212, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2884414, last_token_time=1751885484.837655, first_scheduled_time=1751885445.2936594, first_token_time=None, time_in_queue=0.005218029022216797, finished_time=1751885484.8379562, scheduler_time=0.13244855400262168, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2887256, last_token_time=1751885470.915452, first_scheduled_time=1751885445.2936594, first_token_time=None, time_in_queue=0.004933834075927734, finished_time=1751885470.915671, scheduler_time=0.1375405990074796, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2890186, last_token_time=1751885479.761422, first_scheduled_time=1751885445.2936594, first_token_time=None, time_in_queue=0.004640817642211914, finished_time=1751885479.7616694, scheduler_time=0.14765035799246107, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2893057, last_token_time=1751885496.2062201, first_scheduled_time=1751885482.543759, first_token_time=1751885482.5968657, time_in_queue=37.25445342063904, finished_time=1751885496.206446, scheduler_time=0.13348318800672132, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2896228, last_token_time=1751885496.8618739, first_scheduled_time=1751885482.543759, first_token_time=1751885482.5968657, time_in_queue=37.25413632392883, finished_time=1751885496.862107, scheduler_time=0.13569781101250555, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2900505, last_token_time=1751885497.0173, first_scheduled_time=1751885484.0359194, first_token_time=1751885484.0888646, time_in_queue=38.74586892127991, finished_time=1751885497.0175626, scheduler_time=0.1356472780171316, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2903502, last_token_time=1751885497.6075335, first_scheduled_time=1751885484.0359194, first_token_time=1751885484.0888646, time_in_queue=38.74556922912598, finished_time=1751885497.6077757, scheduler_time=0.13737861001754936, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2906587, last_token_time=1751885502.4977996, first_scheduled_time=1751885484.9056766, first_token_time=1751885484.977173, time_in_queue=39.615017890930176, finished_time=1751885502.4980328, scheduler_time=0.1282635800052958, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.290934, last_token_time=1751885506.97929, first_scheduled_time=1751885484.9056766, first_token_time=1751885484.977173, time_in_queue=39.61474251747131, finished_time=1751885506.9795077, scheduler_time=0.11769818300490442, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2912097, last_token_time=1751885505.5052273, first_scheduled_time=1751885484.9056766, first_token_time=1751885484.977173, time_in_queue=39.61446690559387, finished_time=1751885505.5054705, scheduler_time=0.126882768006908, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.291495, last_token_time=1751885510.765149, first_scheduled_time=1751885485.1705537, first_token_time=1751885485.2649987, time_in_queue=39.879058599472046, finished_time=1751885510.7653515, scheduler_time=0.08907475999149028, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2917647, last_token_time=1751885505.94382, first_scheduled_time=1751885485.1705537, first_token_time=1751885485.2649987, time_in_queue=39.87878894805908, finished_time=1751885505.9440405, scheduler_time=0.12106544900416338, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.2920856, last_token_time=1751885507.091628, first_scheduled_time=1751885485.1705537, first_token_time=1751885485.2649987, time_in_queue=39.87846803665161, finished_time=1751885507.0918221, scheduler_time=0.1181260690009367, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885445.29237, last_token_time=1751885507.136658, first_scheduled_time=1751885485.1705537, first_token_time=1751885485.2649987, time_in_queue=39.87818360328674, finished_time=1751885507.1368225, scheduler_time=0.12009271100941987, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[31]: U. .I'msU.
+
+I'msadidas
+I'msadidas
+I'msadidasooh my friend,
+
+ am I'msounds like
+
+“I'msounds like
+
+sounds like
+
+sounds like
+
+ is a lot of the only, I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure if you can't think it's a lot of people are you're not sure if you can't know what you can't be a fan of the new to this. I'm not sure if this is a good for a lot of people are going to be a fan of the new to this.
+
+
+
+
+ idea of the new one, but I'm not sure if you're not a lot of people are going to be able to the new to this, but I'm not a fan of the new one.
+I'm not sure if you're not sure if I'm not sure if I'm not sure if I'm not a fan of the new to the new to the new one.
+I'm not sure if I'm not sure if I'm not a fan of the new to the new one.
+I'm not sure if I'm not sure if I'm not sure if I'm not a fan of the new to this is a fan of the new one.
+I'm not sure if I'm not sure if I'm not a fan of this is a fan of this.
+I'm not sure if I'm not sure if I'm not a fan of this is a fan of this.
+I'm not sure if I'm not sure if I'm not a fan of this is a fan of this.
+I'm not sure if I'm not sure if I'm not a fan of this is a fan of this.
+I'm not sure if I'm not sure if I'm not a fan of this is a fan of this.
+I'm not sure if I'm not sure if I'm not a fan of this is a fan of this.
+I'm not sure if I'm not a fan of this.
+I'm not sure if I'm not a fan of this.
+I'm not sure if I'm not a fan of this.
+I'm not sure if I'm not a fan of this.
+I'm not sure if I'm not a fan of this.  
+
+generation token length: 512

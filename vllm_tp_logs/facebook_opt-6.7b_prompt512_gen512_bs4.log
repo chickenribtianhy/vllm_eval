@@ -1,0 +1,140 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 512, Gen Len: 512, Batch Size: 4
+Start time: 2025-07-11 14:22:07.445274
+
+Adding requests:   0%|          | 0/4 [00:00<?, ?it/s]Adding requests: 100%|██████████| 4/4 [00:00<00:00, 1300.96it/s]
+Processed prompts:   0%|          | 0/4 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  25%|██▌       | 1/4 [00:12<00:36, 12.17s/it, est. speed input: 42.09 toks/s, output: 42.09 toks/s]Processed prompts:  75%|███████▌  | 3/4 [00:15<00:04,  4.25s/it, est. speed input: 101.59 toks/s, output: 101.59 toks/s]Processed prompts: 100%|██████████| 4/4 [00:18<00:00,  3.84s/it, est. speed input: 112.52 toks/s, output: 112.52 toks/s]Processed prompts: 100%|██████████| 4/4 [00:18<00:00,  4.55s/it, est. speed input: 112.52 toks/s, output: 112.52 toks/s]
+
+Runtime: 18.205331714 seconds
+Total throughput: 224.98903422068324 tokens/sec
+Generation throughput: 112.49451711034162 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 5814.342102520019 tokens/s
+Decode throughput: 114.87250528517845 tokens/s
+Average TTFT: 0.354644775390625 s
+Average TPOT: 0.0274743631394642 s
+
+total prefill time: 0.3522324562072754 
+total decode time: 17.828461170196533 
+===================================
+
+4
+RequestMetrics(arrival_time=1752243727.4456706, last_token_time=1752243739.5935633, first_scheduled_time=1752243727.4493172, first_token_time=1752243727.8015497, time_in_queue=0.0036466121673583984, finished_time=1752243739.5938807, scheduler_time=0.07548314900304831, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752243727.4466028, last_token_time=1752243739.5935633, first_scheduled_time=1752243727.4493172, first_token_time=1752243727.8015497, time_in_queue=0.002714395523071289, finished_time=1752243739.5939262, scheduler_time=0.07548314900304831, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752243727.447349, last_token_time=1752243742.5466595, first_scheduled_time=1752243727.4493172, first_token_time=1752243727.8015497, time_in_queue=0.0019681453704833984, finished_time=1752243742.5468805, scheduler_time=0.06932705400231498, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752243727.447997, last_token_time=1752243745.6300108, first_scheduled_time=1752243727.4493172, first_token_time=1752243727.8015497, time_in_queue=0.0013201236724853516, finished_time=1752243745.6301808, scheduler_time=0.0629841559984925, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[3]: U.
+I'mI'mI'mI'mssU.
+I'mssick
+U. .I'msssargh is that'ss
+U.
+I'ms
+
+
+Haha,
+U.
+U.
+
+Haha,
+
+
+Haha,
+Haha,
+
+Haha,
+
+
+
+Haha,
+
+Haha,
+
+
+
+Haha,
+Haha,
+
+Haha,
+
+Haha,
+
+Fucking,
+
+Haha,
+
+
+
+Haha,
+
+
+Haha,
+
+
+:
+
+Haha,
+
+
+
+
+
+Haha,
+
+Haha,
+
+
+I'msadamazing:Opin'ss
+
+
+
+Haha,
+
+:
+
+
+Haha,
+
+:) is this is this is this is this is this is this is this is this is this is thiss the onlyI'msadidas:Omgwtf is that's the only,
+
+Haha,
+
+:) is this is this is this is this is this is this is this is this is thiss the onlyI'ms1.
+
+:) I'ms
+
+ am I'ms
+
+:
+
+G
+
+I'ms
+
+
+
+I'ms
+
+
+
+ is a lot of
+
+, I
+
+
+
+
+
+,
+
+
+
+
+, I'ms, I , I
+
+                                                                                                                                                                                         
+
+generation token length: 512

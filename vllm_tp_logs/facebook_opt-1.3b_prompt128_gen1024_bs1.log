@@ -1,0 +1,25 @@
+Benchmarking facebook/opt-1.3b | Prompt Len: 128, Gen Len: 1024, Batch Size: 1
+Start time: 2025-07-01 12:59:40.018605
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 1281.49it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:06<00:00,  6.22s/it, est. speed input: 20.57 toks/s, output: 164.57 toks/s]Processed prompts: 100%|██████████| 1/1 [00:06<00:00,  6.22s/it, est. speed input: 20.57 toks/s, output: 164.57 toks/s]
+
+Runtime: 6.223961376 seconds
+Total throughput: 185.09112290480797 tokens/sec
+Generation throughput: 164.52544258205154 tokens/sec
+
+RequestMetrics(arrival_time=1751374780.0189996, last_token_time=1751374786.2369337, first_scheduled_time=1751374780.0201366, first_token_time=1751374780.039601, time_in_queue=0.0011370182037353516, finished_time=1751374786.2371898, scheduler_time=0.07255112799953167, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+=== Metrics ===
+Prefill throughput: 6576.076825085743 tokens/s
+Decode throughput: 165.23237700567952 tokens/s
+Average TTFT: 0.020601511001586914 s/token
+Average TPOT: 0.006057998651633165 s/token
+
+total prefill time: 0.019464492797851562 
+
+total decode time: 6.1973326206207275 
+
+Outputs:
+[0]:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+
+generation token length: 1024

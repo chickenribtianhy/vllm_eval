@@ -1,0 +1,106 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 128, Gen Len: 1024, Batch Size: 8
+Start time: 2025-07-07 10:56:21.066994
+
+Adding requests:   0%|          | 0/8 [00:00<?, ?it/s]Adding requests: 100%|██████████| 8/8 [00:00<00:00, 2762.36it/s]
+Processed prompts:   0%|          | 0/8 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  12%|█▎        | 1/8 [00:24<02:49, 24.20s/it, est. speed input: 5.29 toks/s, output: 42.31 toks/s]Processed prompts:  38%|███▊      | 3/8 [00:35<00:52, 10.50s/it, est. speed input: 10.78 toks/s, output: 86.25 toks/s]Processed prompts:  50%|█████     | 4/8 [00:39<00:33,  8.34s/it, est. speed input: 12.85 toks/s, output: 102.77 toks/s]Processed prompts:  62%|██████▎   | 5/8 [00:40<00:17,  5.88s/it, est. speed input: 15.70 toks/s, output: 125.60 toks/s]Processed prompts:  75%|███████▌  | 6/8 [00:48<00:13,  6.58s/it, est. speed input: 15.73 toks/s, output: 125.81 toks/s]Processed prompts:  88%|████████▊ | 7/8 [00:52<00:05,  5.70s/it, est. speed input: 17.03 toks/s, output: 136.21 toks/s]Processed prompts: 100%|██████████| 8/8 [00:53<00:00,  4.32s/it, est. speed input: 19.01 toks/s, output: 152.09 toks/s]Processed prompts: 100%|██████████| 8/8 [00:53<00:00,  6.73s/it, est. speed input: 19.01 toks/s, output: 152.09 toks/s]
+
+Runtime: 53.865963876 seconds
+Total throughput: 171.0913411150559 tokens/sec
+Generation throughput: 152.08119210227193 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 5599.747710865679 tokens/s
+Decode throughput: 152.66951530778812 tokens/s
+Average TTFT: 0.18493202328681946 s
+Average TPOT: 0.03889723621738505 s
+
+total prefill time: 0.18286538124084473 
+total decode time: 53.658387422561646 
+===================================
+
+8
+RequestMetrics(arrival_time=1751885781.0674043, last_token_time=1751885805.2540421, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0034575462341308594, finished_time=1751885805.2544239, scheduler_time=0.1849981079940335, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.0680609, last_token_time=1751885805.2540421, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0028009414672851562, finished_time=1751885805.2544775, scheduler_time=0.1849981079940335, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.0684266, last_token_time=1751885821.8143709, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0024352073669433594, finished_time=1751885821.8146217, scheduler_time=0.21492812397809757, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.0687287, last_token_time=1751885816.6662054, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0021331310272216797, finished_time=1751885816.6664503, scheduler_time=0.19299090497042926, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.069006, last_token_time=1751885834.9121146, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0018558502197265625, finished_time=1751885834.912316, scheduler_time=0.17139132701595372, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.0692983, last_token_time=1751885820.9070895, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0015635490417480469, finished_time=1751885820.9073405, scheduler_time=0.19601817497277807, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.0695744, last_token_time=1751885833.6725893, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.0012874603271484375, finished_time=1751885833.672824, scheduler_time=0.15692347499498283, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751885781.0698624, last_token_time=1751885829.8843448, first_scheduled_time=1751885781.0708618, first_token_time=1751885781.2537272, time_in_queue=0.00099945068359375, finished_time=1751885829.8845727, scheduler_time=0.18968603498979064, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[7]: U. .I'msU.
+
+I'msadidas
+I'msadidas
+I'msadidasooh my friend,
+
+ am I'msounds like
+
+“I'msounds like
+
+sounds like
+
+sounds like
+
+ is a lot of the only, I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure if you can't think it's a lot of people are you can't know what you can't be a lot of people are going to be a fan of the new to this. I'm not sure if you can't be a fan of the new to this.
+
+
+
+
+
+
+ of the new to the whole "I'm not a fan of the new design. I'm not a lot of people are saying this. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new to the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.I'm not a fan of the new design.
+I'm not a fan of the new design.I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the 
+
+generation token length: 1024

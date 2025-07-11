@@ -1,0 +1,25 @@
+Benchmarking facebook/opt-1.3b | Prompt Len: 128, Gen Len: 128, Batch Size: 1
+Start time: 2025-07-01 12:57:43.521285
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 1150.39it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.32it/s, est. speed input: 168.84 toks/s, output: 168.83 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  1.32it/s, est. speed input: 168.84 toks/s, output: 168.83 toks/s]
+
+Runtime: 0.759852769 seconds
+Total throughput: 336.90737264391464 tokens/sec
+Generation throughput: 168.45368632195732 tokens/sec
+
+RequestMetrics(arrival_time=1751374663.5217204, last_token_time=1751374664.2758696, first_scheduled_time=1751374663.522965, first_token_time=1751374663.542592, time_in_queue=0.0012445449829101562, finished_time=1751374664.2760408, scheduler_time=0.009312347999298254, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+=== Metrics ===
+Prefill throughput: 6521.597045747188 tokens/s
+Decode throughput: 174.55873070166396 tokens/s
+Average TTFT: 0.020871639251708984 s/token
+Average TPOT: 0.005773839049451933 s/token
+
+total prefill time: 0.019627094268798828 
+
+total decode time: 0.7332775592803955 
+
+Outputs:
+[0]:                                                                                                                                  
+
+generation token length: 128

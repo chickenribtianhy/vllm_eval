@@ -1,0 +1,273 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 1024, Gen Len: 1024, Batch Size: 8
+Start time: 2025-07-11 08:18:33.684688
+
+Adding requests:   0%|          | 0/8 [00:00<?, ?it/s]Adding requests: 100%|██████████| 8/8 [00:00<00:00, 794.94it/s]
+Processed prompts:   0%|          | 0/8 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  12%|█▎        | 1/8 [00:22<02:40, 22.87s/it, est. speed input: 44.78 toks/s, output: 44.78 toks/s]Processed prompts:  25%|██▌       | 2/8 [00:38<01:52, 18.69s/it, est. speed input: 53.00 toks/s, output: 53.00 toks/s]Processed prompts:  38%|███▊      | 3/8 [00:57<01:34, 18.96s/it, est. speed input: 53.05 toks/s, output: 53.05 toks/s]Processed prompts:  50%|█████     | 4/8 [01:15<01:13, 18.42s/it, est. speed input: 54.25 toks/s, output: 54.25 toks/s]Processed prompts:  62%|██████▎   | 5/8 [01:35<00:56, 18.87s/it, est. speed input: 53.80 toks/s, output: 53.80 toks/s]Processed prompts:  75%|███████▌  | 6/8 [01:55<00:38, 19.35s/it, est. speed input: 53.21 toks/s, output: 53.21 toks/s]Processed prompts:  88%|████████▊ | 7/8 [02:16<00:20, 20.03s/it, est. speed input: 52.36 toks/s, output: 52.36 toks/s]Processed prompts: 100%|██████████| 8/8 [02:38<00:00, 20.50s/it, est. speed input: 51.72 toks/s, output: 51.72 toks/s]Processed prompts: 100%|██████████| 8/8 [02:38<00:00, 19.80s/it, est. speed input: 51.72 toks/s, output: 51.72 toks/s]
+
+Runtime: 158.410275221 seconds
+Total throughput: 103.4276342058145 tokens/sec
+Generation throughput: 51.71381710290725 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 70.75664692405273 tokens/s
+Decode throughput: 51.84467843760267 tokens/s
+Average TTFT: 51.02788802981377 s
+Average TPOT: 0.03573679050042832 s
+
+total prefill time: 115.777108669281 
+total decode time: 158.01043128967285 
+===================================
+
+8
+RequestMetrics(arrival_time=1752221913.685089, last_token_time=1752221936.5405018, first_scheduled_time=1752221913.6957095, first_token_time=1752221914.0583224, time_in_queue=0.010620355606079102, finished_time=1752221936.5408244, scheduler_time=0.10672997999881773, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.686517, last_token_time=1752221952.3144002, first_scheduled_time=1752221913.6957095, first_token_time=1752221914.0583224, time_in_queue=0.009192466735839844, finished_time=1752221952.3146617, scheduler_time=0.11248394699669007, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.6876602, last_token_time=1752221971.584712, first_scheduled_time=1752221936.694717, first_token_time=1752221936.8784907, time_in_queue=23.007056713104248, finished_time=1752221971.5849733, scheduler_time=0.11331843000743902, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.6888318, last_token_time=1752221989.1695442, first_scheduled_time=1752221952.4587646, first_token_time=1752221952.6435802, time_in_queue=38.76993274688721, finished_time=1752221989.1697938, scheduler_time=0.11096929100858688, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.690001, last_token_time=1752222008.8414485, first_scheduled_time=1752221971.7324135, first_token_time=1752221971.919446, time_in_queue=58.042412519454956, finished_time=1752222008.841706, scheduler_time=0.11268648399391168, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.6911058, last_token_time=1752222029.1271214, first_scheduled_time=1752221989.3179646, first_token_time=1752221989.5058393, time_in_queue=75.62685871124268, finished_time=1752222029.1273654, scheduler_time=0.11333293799407329, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.692191, last_token_time=1752222050.5618153, first_scheduled_time=1752222008.992981, first_token_time=1752222009.2015846, time_in_queue=95.30079007148743, finished_time=1752222050.5620835, scheduler_time=0.1120611140067922, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752221913.6939037, last_token_time=1752222072.0687537, first_scheduled_time=1752222029.2829523, first_token_time=1752222029.4728181, time_in_queue=115.5890486240387, finished_time=1752222072.0690298, scheduler_time=0.08647043200880944, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[7]:  amI'mI'mI'mI'ms is that'ssad
+ am
+ am
+ am
+ am
+ am I'm is that'ss
+ am
+ am I'm
+ am
+ am I'mI'mI'mGAT&I'm is this is this is this is thisI'mI'm
+ you have is this is this is this is this is this is this is this is this is this is this is this is this is this
+I'm
+I'm
+ you is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is this is thiss
+
+
+Haha,
+
+
+Haha,
+I'm I'ms
+
+
+
+ am I'ms
+
+I'msad
+
+I'm I'm I'ms
+I'm I'ms
+
+
+
+
+
+
+
+ am I'm I'm I'm I'ms
+I'manonymous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I'ms
+
+
+
+
+
+I'm not sure,
+
+
+
+
+I'm I'm I'm I'm I'm I'm I'm I'm:
+
+
+
+
+
+
+
+
+
+
+
+I'm I'm I'm I'm not sure,
+
+
+
+
+
+
+I'm the only
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I'm I'm I'm the
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I'm:
+
+
+
+
+
+
+
+
+I'm:
+
+
+I'm the only,
+ you,
+
+
+
+:. I'm the
+
+
+
+:: I:), I'm not, I'm not, I'm not, I'm not, I'm not,
+
+
+
+
+
+
+
+
+
+ I'm ,
+
+
+ I'm not, I'm not, I'm not, I'm not,
+
+ I'm the title,      I'm not, I'm not, I'm not,
+
+
+
+
+,, is,,
+
+
+,
+
+,
+
+ is, is, is the
+
+s,,
+
+,,,,,
+
+     I is  is  is  is is is a lot of,
+                                                                                                         I'm                 I'm                                                                                                                                                                                                                                                                                                              
+
+generation token length: 1024

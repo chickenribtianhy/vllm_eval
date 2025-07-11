@@ -1,0 +1,140 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 512, Gen Len: 1024, Batch Size: 4
+Start time: 2025-07-11 14:33:09.943703
+
+Adding requests:   0%|          | 0/4 [00:00<?, ?it/s]Adding requests: 100%|██████████| 4/4 [00:00<00:00, 1318.03it/s]
+Processed prompts:   0%|          | 0/4 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  25%|██▌       | 1/4 [00:23<01:11, 23.81s/it, est. speed input: 21.50 toks/s, output: 43.00 toks/s]Processed prompts:  50%|█████     | 2/4 [00:34<00:31, 15.80s/it, est. speed input: 30.11 toks/s, output: 60.23 toks/s]Processed prompts:  75%|███████▌  | 3/4 [00:38<00:10, 10.64s/it, est. speed input: 39.89 toks/s, output: 79.78 toks/s]Processed prompts: 100%|██████████| 4/4 [00:44<00:00,  8.78s/it, est. speed input: 46.09 toks/s, output: 92.19 toks/s]Processed prompts: 100%|██████████| 4/4 [00:44<00:00, 11.11s/it, est. speed input: 46.09 toks/s, output: 92.19 toks/s]
+
+Runtime: 44.435069137 seconds
+Total throughput: 138.2691671089139 tokens/sec
+Generation throughput: 92.17944473927594 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 5736.501316600519 tokens/s
+Decode throughput: 92.97861040005715 tokens/s
+Average TTFT: 0.359411358833313 s
+Average TPOT: 0.034027226859173816 s
+
+total prefill time: 0.3570120334625244 
+total decode time: 44.053142786026 
+===================================
+
+4
+RequestMetrics(arrival_time=1752244389.944089, last_token_time=1752244413.7383192, first_scheduled_time=1752244389.9477193, first_token_time=1752244390.3047314, time_in_queue=0.003630399703979492, finished_time=1752244413.738627, scheduler_time=0.14183443099318538, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752244389.9450476, last_token_time=1752244428.430707, first_scheduled_time=1752244389.9477193, first_token_time=1752244390.3047314, time_in_queue=0.0026717185974121094, finished_time=1752244428.430922, scheduler_time=0.14702153399321105, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752244389.9457517, last_token_time=1752244423.9314375, first_scheduled_time=1752244389.9477193, first_token_time=1752244390.3047314, time_in_queue=0.0019676685333251953, finished_time=1752244423.9317236, scheduler_time=0.13513118199352903, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752244389.9463918, last_token_time=1752244434.3578742, first_scheduled_time=1752244389.9477193, first_token_time=1752244390.3047314, time_in_queue=0.0013275146484375, finished_time=1752244434.3581092, scheduler_time=0.13161145999811197, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[3]: U.
+I'mI'mI'mI'mssU.
+I'mssick
+U. .I'msssargh is that'ss
+U.
+I'ms
+
+
+Haha,
+U.
+U.
+
+Haha,
+
+
+Haha,
+Haha,
+
+Haha,
+
+
+
+Haha,
+
+Haha,
+
+
+
+Haha,
+Haha,
+
+Haha,
+
+Haha,
+
+Fucking,
+
+Haha,
+
+
+
+Haha,
+
+
+Haha,
+
+
+:
+
+Haha,
+
+
+
+
+
+Haha,
+
+Haha,
+
+
+I'msadamazing:Opin'ss
+
+
+
+Haha,
+
+:
+
+
+Haha,
+
+:) is this is this is this is this is this is this is this is this is this is thiss the onlyI'msadidas:Omgwtf is that's the only,
+
+Haha,
+
+:) is this is this is this is this is this is this is this is this is thiss the onlyI'ms1.
+
+:) I'ms
+
+ am I'ms
+
+:
+
+G
+
+I'ms
+
+
+
+I'ms
+
+
+
+ is a lot of
+
+, I
+
+
+
+
+
+,
+
+
+
+
+, I'ms, I , I
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+
+generation token length: 1024

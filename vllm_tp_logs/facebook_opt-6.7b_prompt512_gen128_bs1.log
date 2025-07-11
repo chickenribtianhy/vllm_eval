@@ -1,0 +1,73 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 512, Gen Len: 128, Batch Size: 1
+Start time: 2025-07-11 14:13:17.945525
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 870.91it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it, est. speed input: 181.34 toks/s, output: 45.34 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.82s/it, est. speed input: 181.34 toks/s, output: 45.34 toks/s]
+
+Runtime: 2.825450791 seconds
+Total throughput: 226.5125275013258 tokens/sec
+Generation throughput: 45.30250550026516 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 4624.519827981627 tokens/s
+Decode throughput: 47.54547990592056 tokens/s
+Average TTFT: 0.11230182647705078 s
+Average TPOT: 0.021198103747029944 s
+
+total prefill time: 0.11071419715881348 
+total decode time: 2.6921591758728027 
+===================================
+
+1
+RequestMetrics(arrival_time=1752243197.9459653, last_token_time=1752243200.7504263, first_scheduled_time=1752243197.947553, first_token_time=1752243198.058267, time_in_queue=0.0015876293182373047, finished_time=1752243200.7506351, scheduler_time=0.009960766000403964, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[0]: U.
+I'mI'mI'mI'mssU.
+I'mssick
+U. .I'msssargh is that'ss
+U.
+I'ms
+
+
+Haha,
+U.
+U.
+
+
+
+
+Haha!U.
+I'mssad
+
+
+
+
+Haha,
+
+
+
+Haha,
+
+
+
+
+Haha,
+Haha,
+
+Haha,
+Haha,
+
+
+Haha,
+
+Haha,
+
+
+
+Haha,
+Haha 
+
+generation token length: 128

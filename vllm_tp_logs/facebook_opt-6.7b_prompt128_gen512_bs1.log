@@ -1,0 +1,75 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 128, Gen Len: 512, Batch Size: 1
+Start time: 2025-07-07 10:44:41.205714
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 1262.58it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:10<00:00, 10.81s/it, est. speed input: 11.84 toks/s, output: 47.36 toks/s]Processed prompts: 100%|██████████| 1/1 [00:10<00:00, 10.81s/it, est. speed input: 11.84 toks/s, output: 47.36 toks/s]
+
+Runtime: 10.812598866 seconds
+Total throughput: 59.19021022896715 tokens/sec
+Generation throughput: 47.352168183173724 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 2845.027487347977 tokens/s
+Decode throughput: 47.64806046954343 tokens/s
+Average TTFT: 0.04613971710205078 s
+Average TPOT: 0.021028283990759206 s
+
+total prefill time: 0.04499077796936035 
+total decode time: 10.745453119277954 
+===================================
+
+1
+RequestMetrics(arrival_time=1751885081.206114, last_token_time=1751885091.997707, first_scheduled_time=1751885081.207263, first_token_time=1751885081.2522538, time_in_queue=0.0011489391326904297, finished_time=1751885091.9979262, scheduler_time=0.03840951899110223, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[0]: U. .I'msU.
+
+I'msadidas
+I'msadidas
+I'msadidasooh my friend,
+
+ am I'msounds like
+
+“I'msounds like
+
+sounds like
+
+sounds like
+
+ is a lot of the only, I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure if you can't think it's a lot of people are you can't know what you can't be a lot of people are going to be a fan of the new to this. I'm not sure if you can't be a fan of the new to this.
+
+
+
+
+
+
+ of the new to the whole "I'm not a fan of the new design. I'm not a lot of people are saying this. I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new to the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design. I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.
+I'm not a fan of the new design.I'm not a fan of the new design.
+I'm not a fan of the new design 
+
+generation token length: 512

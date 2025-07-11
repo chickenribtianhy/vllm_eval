@@ -1,0 +1,50 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 128, Gen Len: 128, Batch Size: 8
+Start time: 2025-07-07 10:40:47.086078
+
+Adding requests:   0%|          | 0/8 [00:00<?, ?it/s]Adding requests: 100%|██████████| 8/8 [00:00<00:00, 2730.89it/s]
+Processed prompts:   0%|          | 0/8 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  12%|█▎        | 1/8 [00:03<00:21,  3.06s/it, est. speed input: 41.84 toks/s, output: 41.84 toks/s]Processed prompts: 100%|██████████| 8/8 [00:03<00:00,  2.61it/s, est. speed input: 334.68 toks/s, output: 334.68 toks/s]
+
+Runtime: 3.063276053 seconds
+Total throughput: 668.5652760526955 tokens/sec
+Generation throughput: 334.28263802634774 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 5620.9197910232115 tokens/s
+Decode throughput: 358.6421642478386 tokens/s
+Average TTFT: 0.18426576256752014 s
+Average TPOT: 0.022481997182050094 s
+
+total prefill time: 0.1821765899658203 
+total decode time: 2.8552136421203613 
+===================================
+
+8
+RequestMetrics(arrival_time=1751884847.086491, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0035119056701660156, finished_time=1751884850.1278267, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.087156, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.002846956253051758, finished_time=1751884850.1278663, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.0875134, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0024895668029785156, finished_time=1751884850.1278832, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.0878203, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0021827220916748047, finished_time=1751884850.1278956, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.0881395, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0018634796142578125, finished_time=1751884850.127908, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.088443, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0015599727630615234, finished_time=1751884850.1279314, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.088736, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0012669563293457031, finished_time=1751884850.127942, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1751884847.0890112, last_token_time=1751884850.1273932, first_scheduled_time=1751884847.090003, first_token_time=1751884847.2721796, time_in_queue=0.0009918212890625, finished_time=1751884850.1279583, scheduler_time=0.022467750003670517, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[7]: U. .I'msU.
+
+I'msadidas
+I'msadidas
+I'msadidasooh my friend,
+
+ am I'msounds like
+
+“I'msounds like
+
+sounds like
+
+sounds like
+
+ is a lot of the only, I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure if you can't think it's a lot of people are you can't know what you can't be a lot of people are going to be a fan of 
+
+generation token length: 128

@@ -1,0 +1,45 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 1024, Gen Len: 128, Batch Size: 4
+Start time: 2025-07-11 07:53:27.918076
+
+Adding requests:   0%|          | 0/4 [00:00<?, ?it/s]Adding requests: 100%|██████████| 4/4 [00:00<00:00, 808.46it/s]
+Processed prompts:   0%|          | 0/4 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:  25%|██▌       | 1/4 [00:03<00:09,  3.20s/it, est. speed input: 319.52 toks/s, output: 39.94 toks/s]Processed prompts:  75%|███████▌  | 3/4 [00:06<00:02,  2.01s/it, est. speed input: 480.05 toks/s, output: 60.01 toks/s]Processed prompts: 100%|██████████| 4/4 [00:06<00:00,  1.60s/it, est. speed input: 640.05 toks/s, output: 80.01 toks/s]
+
+Runtime: 6.405085423 seconds
+Total throughput: 719.4283441487271 tokens/sec
+Generation throughput: 79.9364826831919 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 1152.2621522328302 tokens/s
+Decode throughput: 85.087910169939 tokens/s
+Average TTFT: 1.9610125422477722 s
+Average TPOT: 0.02222763084051177 s
+
+total prefill time: 3.554746627807617 
+total decode time: 6.017306089401245 
+===================================
+
+4
+RequestMetrics(arrival_time=1752220407.9184463, last_token_time=1752220411.1071527, first_scheduled_time=1752220407.923894, first_token_time=1752220408.2841992, time_in_queue=0.0054476261138916016, finished_time=1752220411.107456, scheduler_time=0.013283856000725791, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752220407.919901, last_token_time=1752220411.1071527, first_scheduled_time=1752220407.923894, first_token_time=1752220408.2841992, time_in_queue=0.003993034362792969, finished_time=1752220411.1074908, scheduler_time=0.013283856000725791, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752220407.9211013, last_token_time=1752220414.3015053, first_scheduled_time=1752220411.1288028, first_token_time=1752220411.4786406, time_in_queue=3.2077014446258545, finished_time=1752220414.3017497, scheduler_time=0.012308864000146968, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752220407.922181, last_token_time=1752220414.3015053, first_scheduled_time=1752220411.1288028, first_token_time=1752220411.4786406, time_in_queue=3.2066218852996826, finished_time=1752220414.3017757, scheduler_time=0.012308864000146968, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[3]:  amI'mI'mI'mI'ms is that'ssad
+ am
+ am
+ am
+ am
+ am I'm is that'ss
+ am
+ am I'm
+ am
+ am I'mI'mI'mGAT&I'm is this is this is this is thisI'mI'm
+ you have is this is this is this is this is this is this is this is this is this is this is this is this is this
+I'm
+I'm
+ you is this is this is this is this is this is this is this is this is this is this is this is this is this is 
+
+generation token length: 128
