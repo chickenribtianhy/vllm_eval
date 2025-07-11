@@ -6,7 +6,7 @@
 # export VLLM_CACHE_DIR=/home/ubuntu/.cache/vllm
 
 # please specify python
-PYTHON_EXEC=$(which python3) 
+# PYTHON_EXEC=$(which python3) 
 PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 
 

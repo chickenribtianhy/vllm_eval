@@ -20,9 +20,16 @@ To run vllm_eval, execute the provided shell script:
 ```bash
 ./run_eval.sh
 ```
+
+Modify python exec before running:
+```bash
+PYTHON_EXEC=<YOUR PYTHON EXEC>
+```
+Modify configuration in terms of model, prompt length, generation length, batch size and tensor parallelism to run evaluation.
+
 Make sure the script has executable permissions. If needed, run:
 ```bash
 chmod +x run_eval.sh
 ```
-Runtime logs go to 
-Calculated metrics go to 
+Runtime logs go to vllm\_tp\_logs \
+Calculated metrics go to vllm\_run\_auto
