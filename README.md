@@ -15,7 +15,6 @@ Visit vLLM [documentation](https://docs.vllm.ai/) to learn more.
 
 - [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)
 - [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
-- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)
 
 To run vllm_eval, execute the provided shell script:
 ```bash
