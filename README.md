@@ -31,5 +31,5 @@ Make sure the script has executable permissions. If needed, run:
 ```bash
 chmod +x run_eval.sh
 ```
-Runtime logs go to vllm\_tp\_logs \
-Calculated metrics go to vllm\_run\_auto
+Runtime logs go to directory vllm\_run\_auto \
+Calculated metrics go to directory vllm\_tp\_logs 

@@ -2,8 +2,8 @@
 # set -x
 
 # please specify cache directory
-# export HUGGINGFACE_HUB_CACHE=/home/ubuntu/.cache/huggingface
-# export VLLM_CACHE_DIR=/home/ubuntu/.cache/vllm
+export HUGGINGFACE_HUB_CACHE=/home/ubuntu/.cache/huggingface
+export VLLM_CACHE_DIR=/home/ubuntu/.cache/vllm
 
 # please specify python
 # PYTHON_EXEC=$(which python3) 
@@ -17,9 +17,9 @@ PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 # batch_sizes=(1 4 8 16 32)
 
 models=("facebook/opt-6.7b")
-prompt_lengths=(128)
-gen_lengths=(128)
-batch_sizes=(1)
+prompt_lengths=(512)
+gen_lengths=(1024)
+batch_sizes=(32)
 
 tensor_parallelism=1
 
