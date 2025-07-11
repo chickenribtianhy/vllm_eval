@@ -17,8 +17,8 @@ PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 # batch_sizes=(1 4 8 16 32)
 
 models=("facebook/opt-6.7b")
-prompt_lengths=(512)
-gen_lengths=(1024)
+prompt_lengths=(128)
+gen_lengths=(128)
 batch_sizes=(32)
 
 tensor_parallelism=1

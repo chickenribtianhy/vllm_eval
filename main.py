@@ -100,7 +100,8 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
                 swap_space=50,
                 cpu_offload_gb=_cpu_offload,
                 preemption_mode="swap",
-                dtype="float16"
+                dtype="float16",
+                # enable_chunked_prefill=False,
                 )
  
     # _ = llm.generate(prompts, warm_up_params)

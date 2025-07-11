@@ -1,2 +1,0 @@
-# OMP_NUM_THREADS=16 
-/home/ubuntu/miniconda3/envs/vllm/bin/python run.py > vllm_run.log 2>&1
