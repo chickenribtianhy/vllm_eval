@@ -1,0 +1,71 @@
+Benchmarking facebook/opt-6.7b | Prompt Len: 512, Gen Len: 128, Batch Size: 4
+Start time: 2025-07-12 15:55:27.602160
+
+
+Processed prompts:   0%|          | 0/4 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]
+Processed prompts:  25%|██▌       | 1/4 [00:03<00:09,  3.30s/it, est. speed input: 154.97 toks/s, output: 38.74 toks/s]
+Processed prompts: 100%|██████████| 4/4 [00:04<00:00,  1.00s/it, est. speed input: 435.52 toks/s, output: 108.88 toks/s]
+Processed prompts: 100%|██████████| 4/4 [00:04<00:00,  1.18s/it, est. speed input: 435.52 toks/s, output: 108.88 toks/s]
+
+Runtime: 4.706275179 seconds
+Total throughput: 543.9545930979735 tokens/sec
+Generation throughput: 108.7909186195947 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 5981.415407240701 tokens/s
+Decode throughput: 117.98434331721977 tokens/s
+Average TTFT: 0.3447141647338867 s
+Average TPOT: 0.0259042283681434 s
+
+total prefill time: 0.3423938751220703 
+total decode time: 4.339558839797974 
+===================================
+
+4
+RequestMetrics(arrival_time=1752335727.6024663, last_token_time=1752335730.8882837, first_scheduled_time=1752335727.6059601, first_token_time=1752335727.948354, time_in_queue=0.003493785858154297, finished_time=1752335730.888235, scheduler_time=0.009796396000638197, model_forward_time=None, model_execute_time=None)
+RequestMetrics(arrival_time=1752335727.6034102, last_token_time=1752335730.8882837, first_scheduled_time=1752335727.6059601, first_token_time=1752335727.948354, time_in_queue=0.002549886703491211, finished_time=1752335730.8882577, scheduler_time=0.009796396000638197, model_forward_time=None, model_execute_time=None)
+RequestMetrics(arrival_time=1752335727.6040504, last_token_time=1752335730.8882837, first_scheduled_time=1752335727.6059601, first_token_time=1752335727.948354, time_in_queue=0.0019097328186035156, finished_time=1752335730.8882675, scheduler_time=0.009796396000638197, model_forward_time=None, model_execute_time=None)
+RequestMetrics(arrival_time=1752335727.6046324, last_token_time=1752335732.2879128, first_scheduled_time=1752335727.6059601, first_token_time=1752335727.948354, time_in_queue=0.0013277530670166016, finished_time=1752335732.2878988, scheduler_time=0.00807094100014183, model_forward_time=None, model_execute_time=None)
+
+
+
+Outputs:
+[3]: U.
+I'mI'mI'mI'mssU.
+I'mssick
+U. .I'msssargh is that'ss
+U.
+I'ms
+
+
+Haha,
+U.
+U.
+
+Haha,
+
+
+Haha,
+Haha,
+
+Haha,
+
+
+
+Haha,
+
+Haha,
+
+
+
+Haha,
+Haha,
+
+Haha,
+
+Haha,
+
+Fucking is this is this is this is this is this is that'ssad
+ 
+
+generation token length: 128
