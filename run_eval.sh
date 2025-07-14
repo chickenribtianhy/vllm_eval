@@ -17,9 +17,9 @@ PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 # batch_sizes=(1 4 8 16 32)
 
 models=("facebook/opt-6.7b")
-prompt_lengths=(128)
-gen_lengths=(128)
-batch_sizes=(32)
+prompt_lengths=(2048)
+gen_lengths=(2048)
+batch_sizes=(1)
 
 tensor_parallelism=1
 
@@ -29,7 +29,7 @@ for model in "${models[@]}"; do
         for gen_len in "${gen_lengths[@]}"; do
             for batch_size in "${batch_sizes[@]}"; do
                 echo "Running configuration: model=$model, prompt_len=$prompt_len, gen_len=$gen_len, batch_size=$batch_size"
-                OMP_NUM_THREADS=16 $PYTHON_EXEC main.py \
+                OMP_NUM_THREADS=16 $PYTHON_EXEC main_test.py \
                     --model "$model" \
                     --prompt_len "$prompt_len" \
                     --gen_len "$gen_len" \
