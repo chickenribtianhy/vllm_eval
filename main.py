@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 from datetime import datetime
 from contextlib import redirect_stdout, redirect_stderr
 
-
+# os.environ["VLLM_ALLOW_LONG_MAX_MODEL_LEN"] = "1"
 os.environ["VLLM_USE_V1"] = "0"
 base_prompt = "Paris is the capital of "
 
@@ -102,6 +102,8 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
                 preemption_mode="swap",
                 dtype="float16",
                 # enable_chunked_prefill=False,
+                # max_model_len=4096, 
+                load_format="dummy",
                 )
  
     # _ = llm.generate(prompts, warm_up_params)

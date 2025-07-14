@@ -1,99 +1,29 @@
 Benchmarking facebook/opt-6.7b | Prompt Len: 128, Gen Len: 1024, Batch Size: 1
-Start time: 2025-07-07 10:53:02.253961
+Start time: 2025-07-14 22:48:46.494911
 
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 1237.26it/s]
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:21<00:00, 21.68s/it, est. speed input: 5.90 toks/s, output: 47.23 toks/s]Processed prompts: 100%|██████████| 1/1 [00:21<00:00, 21.68s/it, est. speed input: 5.90 toks/s, output: 47.23 toks/s]
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 1101.45it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:12<00:00, 12.04s/it, est. speed input: 10.63 toks/s, output: 85.06 toks/s]Processed prompts: 100%|██████████| 1/1 [00:12<00:00, 12.04s/it, est. speed input: 10.63 toks/s, output: 85.06 toks/s]
 
-Runtime: 21.683112169 seconds
-Total throughput: 53.12890469878845 tokens/sec
-Generation throughput: 47.22569306558974 tokens/sec
+Runtime: 12.039744659 seconds
+Total throughput: 95.68309234281348 tokens/sec
+Generation throughput: 85.05163763805643 tokens/sec
 
 ============= Metrics =============
-Prefill throughput: 2828.137047494627 tokens/s
-Decode throughput: 47.373247537725 tokens/s
-Average TTFT: 0.04642057418823242 s
-Average TPOT: 0.021129594636918977 s
+Prefill throughput: 6290.448545350158 tokens/s
+Decode throughput: 85.29074019680725 tokens/s
+Average TTFT: 0.021559953689575195 s
+Average TPOT: 0.011736063197444494 s
 
-total prefill time: 0.04525947570800781 
-total decode time: 21.615575313568115 
+total prefill time: 0.020348310470581055 
+total decode time: 12.005992650985718 
 ===================================
 
 1
-RequestMetrics(arrival_time=1751885582.2543828, last_token_time=1751885603.9163787, first_scheduled_time=1751885582.255544, first_token_time=1751885582.3008034, time_in_queue=0.0011610984802246094, finished_time=1751885603.9166296, scheduler_time=0.07654408603593765, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752533326.4952807, last_token_time=1752533338.5228333, first_scheduled_time=1752533326.4964924, first_token_time=1752533326.5168407, time_in_queue=0.0012116432189941406, finished_time=1752533338.5231214, scheduler_time=0.06742930342443287, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
 
 
 
 Outputs:
-[0]: U. .I'msU.
-
-I'msadidas
-I'msadidas
-I'msadidasooh my friend,
-
- am I'msounds like
-
-“I'msounds like
-
-sounds like
-
-sounds like
-
- is a lot of the only, I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure I'm not sure if you can't think it's a lot of people are you can't know what you can't be a lot of people are going to be a fan of the new to this. I'm not sure if you can't be a fan of the new to this.
-
-
-
-
-
-
- of the new to the whole "I'm not a fan of the new design. I'm not a lot of people are saying this. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new to the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.
-I'm not a fan of the new design.I'm not a fan of the new design.
-I'm not a fan of the new design.I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the new design.
-I'm not a fan of the new design. I'm not a fan of the 
+[0]: <s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s> 
 
 generation token length: 1024

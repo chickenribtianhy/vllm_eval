@@ -1,50 +1,34 @@
-INFO 07-14 20:12:59 [__init__.py:244] Automatically detected platform cuda.
+INFO 07-14 23:38:43 [__init__.py:243] Automatically detected platform cuda.
 benchmarking facebook_opt-6.7b_prompt2048_gen2048_bs1
-INFO 07-14 20:13:10 [config.py:823] This model supports multiple tasks: {'reward', 'score', 'embed', 'classify', 'generate'}. Defaulting to 'generate'.
-INFO 07-14 20:13:10 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.1) with config: model='./optconfig/opt-6.7b', speculative_config=None, tokenizer='./optconfig/opt-6.7b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=./optconfig/opt-6.7b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=False, 
-Traceback (most recent call last):
-  File "/home/ubuntu/vllm_eval/main_test.py", line 172, in <module>
-    benchmark(args.model, args.prompt_len, args.gen_len, args.batch_size, args.tensor_parallelism)
-  File "/home/ubuntu/vllm_eval/main_test.py", line 97, in benchmark
-    llm = LLM(model=model_name,
-          ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 243, in __init__
-    self.llm_engine = LLMEngine.from_engine_args(
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 501, in from_engine_args
-    return engine_cls.from_vllm_config(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 477, in from_vllm_config
-    return cls(
-           ^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 242, in __init__
-    self.tokenizer = self._init_tokenizer()
-                     ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 533, in _init_tokenizer
-    return init_tokenizer_from_configs(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer_group.py", line 111, in init_tokenizer_from_configs
-    return TokenizerGroup(
-           ^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer_group.py", line 24, in __init__
-    self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/transformers_utils/tokenizer.py", line 232, in get_tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 1032, in from_pretrained
-    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2025, in from_pretrained
-    return cls._from_pretrained(
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2063, in _from_pretrained
-    slow_tokenizer = (cls.slow_tokenizer_class)._from_pretrained(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2278, in _from_pretrained
-    tokenizer = cls(*init_inputs, **init_kwargs)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/models/gpt2/tokenization_gpt2.py", line 153, in __init__
-    with open(vocab_file, encoding="utf-8") as vocab_handle:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO 07-14 23:38:45 [__init__.py:31] Available plugins for group vllm.general_plugins:
+INFO 07-14 23:38:45 [__init__.py:33] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+INFO 07-14 23:38:45 [__init__.py:36] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 07-14 23:38:52 [config.py:793] This model supports multiple tasks: {'classify', 'score', 'generate', 'reward', 'embed'}. Defaulting to 'generate'.
+INFO 07-14 23:38:52 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.0.1) with config: model='facebook/opt-6.7b', speculative_config=None, tokenizer='facebook/opt-6.7b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=facebook/opt-6.7b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"compile_sizes": [], "inductor_compile_config": {"enable_auto_functionalized_v2": false}, "cudagraph_capture_sizes": [32, 24, 16, 8, 4, 2, 1], "max_capture_size": 32}, use_cached_outputs=False, 
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+INFO 07-14 23:38:53 [cuda.py:292] Using Flash Attention backend.
+INFO 07-14 23:38:53 [parallel_state.py:1064] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 07-14 23:38:53 [model_runner.py:1170] Starting to load model facebook/opt-6.7b...
+INFO 07-14 23:38:54 [model_runner.py:1202] Model loading took 12.4193 GiB and 0.081420 seconds
+INFO 07-14 23:38:55 [worker.py:291] Memory profiling takes 0.91 seconds
+INFO 07-14 23:38:55 [worker.py:291] the current vLLM instance can use total_gpu_memory (79.15GiB) x gpu_memory_utilization (0.90) = 71.24GiB
+INFO 07-14 23:38:55 [worker.py:291] model weights take 12.42GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 0.38GiB; the rest of the memory reserved for KV Cache is 58.34GiB.
+INFO 07-14 23:38:55 [executor_base.py:112] # cuda blocks: 7467, # CPU blocks: 6400
+INFO 07-14 23:38:55 [executor_base.py:117] Maximum concurrency for 4096 tokens per request: 29.17x
+INFO 07-14 23:39:25 [model_runner.py:1512] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:00<00:02,  2.20it/s]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:00<00:01,  2.72it/s]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:01<00:01,  2.87it/s]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:01<00:00,  3.01it/s]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:01<00:00,  3.00it/s]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:02<00:00,  3.06it/s]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:02<00:00,  3.07it/s]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:02<00:00,  2.96it/s]
+INFO 07-14 23:39:27 [model_runner.py:1670] Graph capturing finished in 2 secs, took 0.21 GiB
+INFO 07-14 23:39:27 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 33.55 seconds
+INFO 07-14 23:39:32 [metrics.py:486] Avg prompt throughput: 409.5 tokens/s, Avg generation throughput: 79.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.0%, CPU KV cache usage: 0.0%.
+INFO 07-14 23:39:37 [metrics.py:486] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 80.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.4%, CPU KV cache usage: 0.0%.
+INFO 07-14 23:39:42 [metrics.py:486] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 79.6 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.7%, CPU KV cache usage: 0.0%.
+INFO 07-14 23:39:47 [metrics.py:486] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 78.8 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.1%, CPU KV cache usage: 0.0%.
+INFO 07-14 23:39:52 [metrics.py:486] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 78.0 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.4%, CPU KV cache usage: 0.0%.
+[rank0]:[W714 23:39:54.213588147 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
