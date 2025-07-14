@@ -21,7 +21,7 @@ To run vllm_eval, execute the provided shell script:
 ./run_eval.sh
 ```
 
-Modify python exec before running:
+Modify python exec before running the script:
 ```bash
 PYTHON_EXEC=<YOUR PYTHON EXEC>
 ```
