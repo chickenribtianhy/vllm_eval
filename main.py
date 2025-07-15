@@ -7,6 +7,8 @@ from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
 from datetime import datetime
 from contextlib import redirect_stdout, redirect_stderr
+import json
+import math
 
 # os.environ["VLLM_ALLOW_LONG_MAX_MODEL_LEN"] = "1"
 os.environ["VLLM_USE_V1"] = "0"
@@ -71,6 +73,24 @@ def calculate_metrics(outputs):
     avg_tpot = total_tpot / count
     return prefill_throughput, decode_throughput, avg_ttft, avg_tpot, total_prefill_time, total_decode_time
 
+def calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, batch_size):
+    if model_name.lower() == "facebook/opt-6.7b":
+        num_layers = 32
+        hidden_size = 4096
+        num_heads = 32
+        head_dim = hidden_size // num_heads
+    else:
+        raise ValueError(f"Model '{model_name}' is not supported in this function.")
+
+    total_tokens = prompt_len + gen_len
+    dtype_bytes = 2  # FP16
+
+    # Each token: 2 (key and value) * num_layers * num_heads * head_dim * dtype_bytes
+    bytes_per_token = 2 * num_layers * num_heads * head_dim * dtype_bytes
+    total_bytes = bytes_per_token * total_tokens * batch_size
+
+    size_gb = total_bytes / (1024 ** 3)
+    return size_gb
 
 def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     print(f"benchmarking {model_name.replace('/', '_')}_prompt{prompt_len}_gen{gen_len}_bs{batch_size}")
@@ -79,30 +99,43 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     prompts = [prefix_pad_prompt(base_prompt, prompt_len, tokenizer) for _ in range(batch_size)]
     
-    # warm_up_params = SamplingParams(temperature=0.9, max_tokens=10, min_tokens=10)
     sampling_params = SamplingParams(temperature=0, max_tokens=gen_len, min_tokens=gen_len)
-    # prefill_params = SamplingParams(temperature=0.9, max_tokens=1, best_of=3)
-    # decode_params = SamplingParams(temperature=0.9, max_tokens=gen_len, min_tokens=gen_len, best_of=3)
-    # test_params = SamplingParams(temperature=0.8, top_p=0.95)
 
-    # num_gpus = torch.cuda.device_count()
+    expected_model_len = prompt_len + gen_len
+    # modify model config
+    _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
+    # change max_position_embeddings to expected_model_len
+    # Load the JSON config
+    with open(_config_json, "r") as f:
+        config = json.load(f)
+    if expected_model_len > 2048:
+        config["max_position_embeddings"] = expected_model_len
+    else:
+        config["max_position_embeddings"] = 2048
+    with open(_config_json, "w") as f:
+        json.dump(config, f, indent=2)
+
+    calculated_kv_cache_size_per_req = calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, 1)
+    print(f"kv cache size per request: {calculated_kv_cache_size_per_req} GB")
+
+
 
     _cpu_offload = 0
-    if model_name == "facebook/opt-30b":
-        _cpu_offload = 19 # for TP=2
+    # offload model weight
+    if calculated_kv_cache_size_per_req > 1.33:
+        _cpu_offload = math.ceil(calculated_kv_cache_size_per_req-1)
+        print(f"offloading {_cpu_offload} GB model weights")
+
     llm = LLM(model=model_name,
                 tensor_parallel_size=tensor_parallelism,
                 gpu_memory_utilization=0.90,
-                max_num_batched_tokens=4096,
-                # max_num_batched_tokens=prompt_len*batch_size,
+                # max_num_batched_tokens=4096,
                 max_num_seqs=32,
                 disable_log_stats=False,
                 swap_space=50,
                 cpu_offload_gb=_cpu_offload,
                 preemption_mode="swap",
                 dtype="float16",
-                # enable_chunked_prefill=False,
-                # max_model_len=4096, 
                 load_format="dummy",
                 )
  

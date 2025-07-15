@@ -1,0 +1,91 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/vllm_eval/main.py", line 6, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/__init__.py", line 13, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 22, in <module>
+    from vllm.config import (BlockSize, CacheConfig, CacheDType, CompilationConfig,
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/config.py", line 37, in <module>
+    from vllm.model_executor.layers.quantization import (QUANTIZATION_METHODS,
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/__init__.py", line 4, in <module>
+    from vllm.model_executor.parameter import (BasevLLMParameter,
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/parameter.py", line 10, in <module>
+    from vllm.distributed import get_tensor_model_parallel_rank
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/distributed/__init__.py", line 4, in <module>
+    from .communication_op import *
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/distributed/communication_op.py", line 9, in <module>
+    from .parallel_state import get_tp_group
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/distributed/parallel_state.py", line 150, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/platforms/__init__.py", line 12, in <module>
+    from .interface import _Backend  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/platforms/interface.py", line 15, in <module>
+    from vllm.inputs import ProcessorInputs, PromptType
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/inputs/__init__.py", line 9, in <module>
+    from .registry import (DummyData, InputContext, InputProcessingContext,
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/inputs/registry.py", line 8, in <module>
+    from transformers import BatchFeature, PretrainedConfig, ProcessorMixin
+  File "<frozen importlib._bootstrap>", line 1412, in _handle_fromlist
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2045, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2073, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/processing_utils.py", line 35, in <module>
+    from .image_utils import ChannelDimension, ImageInput, is_valid_image, is_vision_available, load_image
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/image_utils.py", line 59, in <module>
+    from torchvision.transforms import InterpolationMode
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torchvision/__init__.py", line 10, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torchvision/models/__init__.py", line 2, in <module>
+    from .convnext import *
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torchvision/models/convnext.py", line 8, in <module>
+    from ..ops.misc import Conv2dNormActivation, Permute
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torchvision/ops/__init__.py", line 23, in <module>
+    from .poolers import MultiScaleRoIAlign
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torchvision/ops/poolers.py", line 10, in <module>
+    from .roi_align import roi_align
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torchvision/ops/roi_align.py", line 7, in <module>
+    from torch._dynamo.utils import is_compile_supported
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import config, convert_frame, eval_frame, resume_execution
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 52, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 52, in <module>
+    from torch._dynamo.exc import TensorifyScalarRestartAnalysis
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_dynamo/exc.py", line 41, in <module>
+    from .utils import counters
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_dynamo/utils.py", line 69, in <module>
+    import torch.fx.experimental.symbolic_shapes
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/fx/experimental/symbolic_shapes.py", line 67, in <module>
+    from torch.utils._sympy.functions import (
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/_sympy/functions.py", line 9, in <module>
+    import sympy
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/__init__.py", line 203, in <module>
+    from .geometry import (Point, Point2D, Point3D, Line, Ray, Segment, Line2D,
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/geometry/__init__.py", line 13, in <module>
+    from sympy.geometry.point import Point, Point2D, Point3D
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/geometry/point.py", line 37, in <module>
+    from .entity import GeometryEntity
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/geometry/entity.py", line 35, in <module>
+    from sympy.sets.handlers.intersection import intersection_sets
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/sets/handlers/intersection.py", line 244, in <module>
+    @intersection_sets.register(ImageSet, Set)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/multipledispatch/dispatcher.py", line 148, in _
+    self.add(types, func, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/multipledispatch/dispatcher.py", line 219, in add
+    self.reorder(on_ambiguity=on_ambiguity)
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/multipledispatch/dispatcher.py", line 224, in reorder
+    self.ordering = ordering(self.funcs)
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/sympy/multipledispatch/conflict.py", line 66, in ordering
+    edges[s] = []
+    ~~~~~^^^
+KeyboardInterrupt

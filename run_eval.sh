@@ -2,13 +2,13 @@
 # set -x
 
 # please specify cache directory
-export HUGGINGFACE_HUB_CACHE=/home/htian02/.cache/huggingface
-export VLLM_CACHE_DIR=/home/htian02/.cache/vllm
+export HUGGINGFACE_HUB_CACHE=/home/ubuntu/.cache/huggingface
+export VLLM_CACHE_DIR=/home/ubuntu/.cache/vllm
 
 # please specify python
 # PYTHON_EXEC=$(which python3) 
-# PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
-PYTHON_EXEC=/home/htian02/anaconda3/envs/vllm/bin/python
+PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
+# PYTHON_EXEC=/home/htian02/anaconda3/envs/vllm/bin/python
 
 # configuration
 # models=("facebook/opt-6.7b")
@@ -16,9 +16,15 @@ PYTHON_EXEC=/home/htian02/anaconda3/envs/vllm/bin/python
 # gen_lengths=(128 512 1024 2048)
 # batch_sizes=(1 4 8 16 32)
 
+# models=("facebook/opt-6.7b")
+# prompt_lengths=(512 1024)
+# gen_lengths=(1024 2048 4096 8192)
+# batch_sizes=(1)
+
+
 models=("facebook/opt-6.7b")
-prompt_lengths=(2048)
-gen_lengths=(4096)
+prompt_lengths=(1024)
+gen_lengths=(8192)
 batch_sizes=(1)
 
 tensor_parallelism=1

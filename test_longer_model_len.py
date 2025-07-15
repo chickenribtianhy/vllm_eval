@@ -3,7 +3,7 @@
 
 from vllm import LLM, SamplingParams
 import os
-os.environ["HUGGINGFACE_HUB_CACHE"] = "/home/htian02/.cache/huggingface"
+os.environ["HUGGINGFACE_HUB_CACHE"] = "/home/ubuntu/.cache/huggingface"
 os.environ["VLLM_ALLOW_LONG_MAX_MODEL_LEN"] = "1"
 
 # Sample prompts.
@@ -21,8 +21,9 @@ sampling_params = SamplingParams(temperature=0.8, top_p=0.95, max_tokens=gen_len
 def main():
     # Create an LLM.
     llm = LLM(model="facebook/opt-6.7b",
-              max_model_len=4096, 
+              max_model_len=4096+1024, 
               load_format="dummy",
+              gpu_memory_utilization=0.90,
               )
     # Generate texts from the prompts.
     # The output is a list of RequestOutput objects

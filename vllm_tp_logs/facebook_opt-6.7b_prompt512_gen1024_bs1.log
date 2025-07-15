@@ -1,92 +1,29 @@
 Benchmarking facebook/opt-6.7b | Prompt Len: 512, Gen Len: 1024, Batch Size: 1
-Start time: 2025-07-11 14:31:29.414022
+Start time: 2025-07-15 01:42:01.081988
 
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 909.04it/s]
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:21<00:00, 21.90s/it, est. speed input: 23.38 toks/s, output: 46.76 toks/s]Processed prompts: 100%|██████████| 1/1 [00:21<00:00, 21.90s/it, est. speed input: 23.38 toks/s, output: 46.76 toks/s]
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 875.09it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:21<00:00, 21.90s/it, est. speed input: 23.38 toks/s, output: 46.77 toks/s]Processed prompts: 100%|██████████| 1/1 [00:21<00:00, 21.90s/it, est. speed input: 23.38 toks/s, output: 46.77 toks/s]
 
-Runtime: 21.902262831 seconds
-Total throughput: 70.12974010274336 tokens/sec
-Generation throughput: 46.75316006849557 tokens/sec
+Runtime: 21.898134082 seconds
+Total throughput: 70.1429626034927 tokens/sec
+Generation throughput: 46.76197506899514 tokens/sec
 
 ============= Metrics =============
-Prefill throughput: 5059.986682532015 tokens/s
-Decode throughput: 47.019240408732664 tokens/s
-Average TTFT: 0.10265827178955078 s
-Average TPOT: 0.021288679025972576 s
+Prefill throughput: 5066.982952628363 tokens/s
+Decode throughput: 47.028092069682785 tokens/s
+Average TTFT: 0.10259079933166504 s
+Average TPOT: 0.02128467205565929 s
 
-total prefill time: 0.10118603706359863 
-total decode time: 21.778318643569946 
+total prefill time: 0.10104632377624512 
+total decode time: 21.774219512939453 
 ===================================
 
 1
-RequestMetrics(arrival_time=1752244289.4144058, last_token_time=1752244311.2953827, first_scheduled_time=1752244289.415878, first_token_time=1752244289.517064, time_in_queue=0.0014722347259521484, finished_time=1752244311.2956538, scheduler_time=0.07426882499612475, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1752543721.0824413, last_token_time=1752543742.9592516, first_scheduled_time=1752543721.0839858, first_token_time=1752543721.1850321, time_in_queue=0.0015444755554199219, finished_time=1752543742.9595134, scheduler_time=0.07246693299748586, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
 
 
 
 Outputs:
-[0]: U.
-I'mI'mI'mI'mssU.
-I'mssick
-U. .I'msssargh is that'ss
-U.
-I'ms
-
-
-Haha,
-U.
-U.
-
-
-
-
-Haha!U.
-I'mssad
-
-
-
-
-Haha,
-
-
-
-Haha,
-
-
-
-
-Haha,
-Haha,
-
-Haha,
-Haha,
-
-
-Haha,
-
-Haha,
-
-
-
-Haha,
-Haha,
-Haha,
-
-
-
-Haha,
-! is this is this is this is this is this is this is this is this is this is that's the onlyI'mGotta2.
-
-:) is this is this is this is this is this is this is this is thissad
-
-:
-
-:,
-
-
-, I'm:
-
-, I'm:
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+[0]: <s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s> 
 
 generation token length: 1024
