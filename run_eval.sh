@@ -23,7 +23,7 @@ PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 
 
 models=("facebook/opt-6.7b")
-prompt_lengths=(1024)
+prompt_lengths=(512)
 gen_lengths=(8192)
 batch_sizes=(1)
 
