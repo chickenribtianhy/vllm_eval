@@ -31,6 +31,8 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     sampling_params = SamplingParams(temperature=0, max_tokens=gen_len, min_tokens=gen_len)
 
     expected_model_len = prompt_len + gen_len
+
+    modify_model_config(model_name, expected_model_len)
     # modify model config
     _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
     # change max_position_embeddings to expected_model_len
@@ -48,12 +50,8 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     print(f"kv cache size per request: {calculated_kv_cache_size_per_req} GB")
 
 
-
-    _cpu_offload = 0
-    # offload model weight
-    if calculated_kv_cache_size_per_req > 1.33:
-        _cpu_offload = math.ceil(calculated_kv_cache_size_per_req-1)
-        print(f"offloading {_cpu_offload} GB model weights")
+    _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req)
+    print(f"offloading {_cpu_offload} GB model weights")
 
     llm = LLM(model=model_name,
                 tensor_parallel_size=tensor_parallelism,

@@ -1,8 +1,8 @@
 
 import torch
 from transformers import AutoTokenizer
-
-
+import json
+import math
 
 def prefix_pad_prompt(prompt, target_len, tokenizer):
     input_ids = tokenizer(prompt)["input_ids"]
@@ -61,14 +61,22 @@ def calculate_metrics(outputs):
 
 
 def calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, batch_size):
-    if model_name.lower() == "facebook/opt-6.7b":
+    if model_name == "facebook/opt-6.7b":
         num_layers = 32
         hidden_size = 4096
         num_heads = 32
-        head_dim = hidden_size // num_heads
+    elif model_name == "facebook/opt-13b":
+        num_layers = 40
+        hidden_size = 5120
+        num_heads = 40
+    elif model_name == "facebook/opt-30b":
+        num_layers = 48
+        hidden_size = 7168
+        num_heads = 56
     else:
         raise ValueError(f"Model '{model_name}' is not supported in this function.")
 
+    head_dim = hidden_size // num_heads
     total_tokens = prompt_len + gen_len
     dtype_bytes = 2  # FP16
 
@@ -78,3 +86,66 @@ def calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, batch_size):
 
     size_gb = total_bytes / (1024 ** 3)
     return size_gb
+
+def modify_model_config(model_name, expected_model_len):
+    if model_name == "facebook/opt-6.7b":
+        _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
+    if model_name == "facebook/opt-13b":
+        _config_json = ""
+        # pass
+    with open(_config_json, "r") as f:
+        config = json.load(f)
+    if expected_model_len > 2048:
+        config["max_position_embeddings"] = expected_model_len
+    else:
+        config["max_position_embeddings"] = 2048
+    with open(_config_json, "w") as f:
+        json.dump(config, f, indent=2)
+
+def estimate_cpu_offload(model_name, kv_size):
+    """
+    Estimate how much model weight needs to be offloaded to CPU,
+    given the kv cache size (in GB), based on 90% utilization of 15.77GB GPU memory.
+    """
+
+    # example offload 2gb
+    # model weights take 10.43GiB; 
+    # non_torch_memory takes 0.07GiB; 
+    # PyTorch activation peak memory takes 0.85GiB; 
+    # the rest of the memory reserved for KV Cache is 2.84GiB.
+
+    # example offload 1gb
+    # model weights take 11.41GiB; 
+    # non_torch_memory takes 0.07GiB; 
+    # PyTorch activation peak memory takes 0.76GiB; 
+    # the rest of the memory reserved for KV Cache is 1.95GiB.
+    
+    # example offload nothing
+    # model weights take 12.40GiB; 
+    # non_torch_memory takes 0.07GiB; 
+    # PyTorch activation peak memory takes 0.38GiB; 
+    # the rest of the memory reserved for KV Cache is 1.33GiB.
+    
+    _GPU_MEM = 15.77 * 0.9
+    non_torch_memory = 0.07  # constant across examples
+    activation = 0
+    model_size_gb = 0
+
+    if model_name == "facebook/opt-6.7b":
+        model_size_gb = 12.4
+        activation = 0.38
+    elif model_name == "facebook/opt-13b":
+        model_size_gb = 24.9  # reported size for OPT-13B in vLLM logs
+        activation = 0.6      # rough estimate, can tune based on observation
+    elif model_name == "facebook/opt-30b":
+        model_size_gb = 60.1
+        activation = 1.0
+    else:
+        raise ValueError(f"Unsupported model: {model_name}")
+
+    # Compute available memory for model weights
+    remaining_mem = _GPU_MEM - non_torch_memory - activation - kv_size
+    _cpu_offload = max(0, model_size_gb - remaining_mem)
+
+    _cpu_offload = math.ceil(_cpu_offload)
+    return _cpu_offload
