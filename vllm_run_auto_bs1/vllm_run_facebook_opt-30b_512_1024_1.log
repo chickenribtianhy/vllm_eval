@@ -1,0 +1,16 @@
+INFO 07-18 04:30:17 [__init__.py:244] Automatically detected platform cuda.
+benchmarking facebook_opt-30b_prompt512_gen1024_bs1
+kv cache size per request: 1.96875 GB
+offloading 46 GB model weights
+INFO 07-18 04:30:31 [config.py:823] This model supports multiple tasks: {'embed', 'reward', 'classify', 'generate', 'score'}. Defaulting to 'generate'.
+INFO 07-18 04:30:32 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.1) with config: model='facebook/opt-30b', speculative_config=None, tokenizer='facebook/opt-30b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=1536, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=facebook/opt-30b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 07-18 04:30:36 [cuda.py:275] Cannot use FlashAttention-2 backend for Volta and Turing GPUs.
+INFO 07-18 04:30:36 [cuda.py:324] Using XFormers backend.
+INFO 07-18 04:30:36 [parallel_state.py:1065] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 07-18 04:30:36 [model_runner.py:1171] Starting to load model facebook/opt-30b...
+INFO 07-18 04:34:09 [model_runner.py:1203] Model loading took 9.5953 GiB and 211.670407 seconds
+INFO 07-18 04:34:15 [worker.py:294] Memory profiling takes 6.36 seconds
+INFO 07-18 04:34:15 [worker.py:294] the current vLLM instance can use total_gpu_memory (15.77GiB) x gpu_memory_utilization (0.90) = 14.19GiB
+INFO 07-18 04:34:15 [worker.py:294] model weights take 9.60GiB; non_torch_memory takes 0.20GiB; PyTorch activation peak memory takes 1.48GiB; the rest of the memory reserved for KV Cache is 2.91GiB.
+INFO 07-18 04:34:15 [executor_base.py:113] # cuda blocks: 142, # CPU blocks: 2438
+INFO 07-18 04:34:15 [executor_base.py:118] Maximum concurrency for 1536 tokens per request: 1.48x

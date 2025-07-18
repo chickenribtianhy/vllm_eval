@@ -22,9 +22,9 @@ PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 # batch_sizes=(1)
 
 
-models=("facebook/opt-6.7b")
+models=("facebook/opt-30b")
 prompt_lengths=(512)
-gen_lengths=(8192)
+gen_lengths=(1024)
 batch_sizes=(1)
 
 tensor_parallelism=1
@@ -41,7 +41,7 @@ for model in "${models[@]}"; do
                     --gen_len "$gen_len" \
                     --batch_size "$batch_size" \
                     --tensor_parallelism "$tensor_parallelism" \
-                    > vllm_run_auto/vllm_run_${model_safe}_${prompt_len}_${gen_len}_${batch_size}.log \
+                    > vllm_run_auto_bs1/vllm_run_${model_safe}_${prompt_len}_${gen_len}_${batch_size}.log \
                     2>&1 
             done
         done

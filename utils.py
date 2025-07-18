@@ -91,14 +91,16 @@ def modify_model_config(model_name, expected_model_len):
     if model_name == "facebook/opt-6.7b":
         _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
     if model_name == "facebook/opt-13b":
-        _config_json = ""
-        # pass
+        _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
+    if model_name == "facebook/opt-30b":
+        _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
+        
     with open(_config_json, "r") as f:
         config = json.load(f)
-    if expected_model_len > 2048:
+    if expected_model_len > 1024:
         config["max_position_embeddings"] = expected_model_len
     else:
-        config["max_position_embeddings"] = 2048
+        config["max_position_embeddings"] = 1024
     with open(_config_json, "w") as f:
         json.dump(config, f, indent=2)
 
@@ -138,7 +140,7 @@ def estimate_cpu_offload(model_name, kv_size):
         model_size_gb = 24.9  # reported size for OPT-13B in vLLM logs
         activation = 0.6      # rough estimate, can tune based on observation
     elif model_name == "facebook/opt-30b":
-        model_size_gb = 60.1
+        model_size_gb = 56
         activation = 1.0
     else:
         raise ValueError(f"Unsupported model: {model_name}")

@@ -20,6 +20,7 @@ log_dir = "./vllm_tp_logs_bs1"
 
 os.makedirs(log_dir, exist_ok=True)
 
+_OFFLOAD_DEV = 1
 
 def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     print(f"benchmarking {model_name.replace('/', '_')}_prompt{prompt_len}_gen{gen_len}_bs{batch_size}")
@@ -33,24 +34,12 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     expected_model_len = prompt_len + gen_len
 
     modify_model_config(model_name, expected_model_len)
-    # modify model config
-    _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
-    # change max_position_embeddings to expected_model_len
-    # Load the JSON config
-    with open(_config_json, "r") as f:
-        config = json.load(f)
-    if expected_model_len > 2048:
-        config["max_position_embeddings"] = expected_model_len
-    else:
-        config["max_position_embeddings"] = 2048
-    with open(_config_json, "w") as f:
-        json.dump(config, f, indent=2)
 
     calculated_kv_cache_size_per_req = calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, 1)
     print(f"kv cache size per request: {calculated_kv_cache_size_per_req} GB")
 
 
-    _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req)
+    _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req) + _OFFLOAD_DEV
     print(f"offloading {_cpu_offload} GB model weights")
 
     llm = LLM(model=model_name,
