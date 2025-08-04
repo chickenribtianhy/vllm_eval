@@ -1,25 +1,25 @@
 Benchmarking facebook/opt-6.7b | Prompt Len: 1024, Gen Len: 1024, Batch Size: 1
-Start time: 2025-08-01 03:00:54.175996
+Start time: 2025-08-04 11:30:26.651870
 
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 467.75it/s]
-Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:16<00:00, 16.65s/it, est. speed input: 61.50 toks/s, output: 61.50 toks/s]Processed prompts: 100%|██████████| 1/1 [00:16<00:00, 16.65s/it, est. speed input: 61.50 toks/s, output: 61.50 toks/s]
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 447.39it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:16<00:00, 16.77s/it, est. speed input: 61.07 toks/s, output: 61.07 toks/s]Processed prompts: 100%|██████████| 1/1 [00:16<00:00, 16.77s/it, est. speed input: 61.07 toks/s, output: 61.07 toks/s]
 
-Runtime: 16.653038418 seconds
-Total throughput: 122.980560579641 tokens/sec
-Generation throughput: 61.4902802898205 tokens/sec
+Runtime: 16.771814128 seconds
+Total throughput: 122.10962895068742 tokens/sec
+Generation throughput: 61.05481447534371 tokens/sec
 
 ============= Metrics =============
-Prefill throughput: 3718.0713459607327 tokens/s
-Decode throughput: 62.54946081298869 tokens/s
-Average TTFT: 0.278231143951416 s
-Average TPOT: 0.01600297595049279 s
+Prefill throughput: 3643.223718542496 tokens/s
+Decode throughput: 62.12160920463254 tokens/s
+Average TTFT: 0.2840099334716797 s
+Average TPOT: 0.016113193620101912 s
 
-total prefill time: 0.27541160583496094 
-total decode time: 16.371044397354126 
+total prefill time: 0.2810697555541992 
+total decode time: 16.483797073364258 
 ===================================
 
 1
-RequestMetrics(arrival_time=1754017254.1764872, last_token_time=1754017270.8257627, first_scheduled_time=1754017254.1793067, first_token_time=1754017254.4547184, time_in_queue=0.002819538116455078, finished_time=1754017270.8262553, scheduler_time=0.07913270299377473, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+RequestMetrics(arrival_time=1754307026.6524405, last_token_time=1754307043.4202476, first_scheduled_time=1754307026.6553807, first_token_time=1754307026.9364505, time_in_queue=0.0029401779174804688, finished_time=1754307043.420742, scheduler_time=0.08107798498349439, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
 
 
 
