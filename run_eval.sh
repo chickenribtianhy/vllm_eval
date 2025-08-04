@@ -2,7 +2,8 @@
 # set -x
 
 # please specify cache directory
-export HUGGINGFACE_HUB_CACHE=/home/ubuntu/.cache/huggingface
+# export HUGGINGFACE_HUB_CACHE=/home/ubuntu/.cache/huggingface
+export HUGGINGFACE_HUB_CACHE=/dev/shm/.cache/huggingface
 export VLLM_CACHE_DIR=/home/ubuntu/.cache/vllm
 
 # please specify python
@@ -16,18 +17,22 @@ PYTHON_EXEC=/home/ubuntu/miniconda3/envs/vllm/bin/python
 # gen_lengths=(128 512 1024 2048)
 # batch_sizes=(1 4 8 16 32)
 
-# models=("facebook/opt-6.7b")
+# models=("facebook/opt-13b")
 # prompt_lengths=(512 1024)
 # gen_lengths=(1024 2048 4096 8192)
 # batch_sizes=(1)
 
-
 models=("facebook/opt-30b")
-prompt_lengths=(512)
-gen_lengths=(1024)
+prompt_lengths=(512 )
+gen_lengths=(2048 )
 batch_sizes=(1)
 
-tensor_parallelism=1
+# models=("facebook/opt-13b")
+# prompt_lengths=(512 )
+# gen_lengths=(1024 )
+# batch_sizes=(1)
+
+tensor_parallelism=2
 
 for model in "${models[@]}"; do
     model_safe=${model//\//_}
@@ -41,7 +46,7 @@ for model in "${models[@]}"; do
                     --gen_len "$gen_len" \
                     --batch_size "$batch_size" \
                     --tensor_parallelism "$tensor_parallelism" \
-                    > vllm_run_auto_bs1/vllm_run_${model_safe}_${prompt_len}_${gen_len}_${batch_size}.log \
+                    > vllm_run_auto_bs1_tp2/vllm_run_${model_safe}_${prompt_len}_${gen_len}_${batch_size}.log \
                     2>&1 
             done
         done

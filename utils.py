@@ -87,13 +87,21 @@ def calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, batch_size):
     size_gb = total_bytes / (1024 ** 3)
     return size_gb
 
-def modify_model_config(model_name, expected_model_len):
-    if model_name == "facebook/opt-6.7b":
-        _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
-    if model_name == "facebook/opt-13b":
-        _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
-    if model_name == "facebook/opt-30b":
-        _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
+def modify_model_config(model_name, expected_model_len, tp=1):
+    if tp == 1: 
+        if model_name == "facebook/opt-6.7b":
+            _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
+        if model_name == "facebook/opt-13b":
+            _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
+        if model_name == "facebook/opt-30b":
+            _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
+    if tp == 2:
+        if model_name == "facebook/opt-6.7b":
+            _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
+        if model_name == "facebook/opt-13b":
+            _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
+        if model_name == "facebook/opt-30b":
+            _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
         
     with open(_config_json, "r") as f:
         config = json.load(f)
@@ -104,7 +112,7 @@ def modify_model_config(model_name, expected_model_len):
     with open(_config_json, "w") as f:
         json.dump(config, f, indent=2)
 
-def estimate_cpu_offload(model_name, kv_size):
+def estimate_cpu_offload(model_name, kv_size, tp=1):
     """
     Estimate how much model weight needs to be offloaded to CPU,
     given the kv cache size (in GB), based on 90% utilization of 15.77GB GPU memory.
@@ -128,8 +136,10 @@ def estimate_cpu_offload(model_name, kv_size):
     # PyTorch activation peak memory takes 0.38GiB; 
     # the rest of the memory reserved for KV Cache is 1.33GiB.
     
-    _GPU_MEM = 15.77 * 0.9
+    _GPU_MEM = 15.77 * 0.9 * tp
     non_torch_memory = 0.07  # constant across examples
+    if tp == 2:
+        non_torch_memory = 0.17 * tp
     activation = 0
     model_size_gb = 0
 

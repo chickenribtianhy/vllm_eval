@@ -12,15 +12,14 @@ import math
 
 from utils import *
 
-# os.environ["VLLM_ALLOW_LONG_MAX_MODEL_LEN"] = "1"
 os.environ["VLLM_USE_V1"] = "0"
 base_prompt = "Paris is the capital of "
 
-log_dir = "./vllm_tp_logs_bs1"
+log_dir = "./vllm_tp_logs_bs1_tp2"
 
 os.makedirs(log_dir, exist_ok=True)
 
-_OFFLOAD_DEV = 1
+_OFFLOAD_DEV = 0
 
 def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
     print(f"benchmarking {model_name.replace('/', '_')}_prompt{prompt_len}_gen{gen_len}_bs{batch_size}")
@@ -33,13 +32,14 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
 
     expected_model_len = prompt_len + gen_len
 
-    modify_model_config(model_name, expected_model_len)
+    modify_model_config(model_name, expected_model_len, tensor_parallelism)
 
     calculated_kv_cache_size_per_req = calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, 1)
     print(f"kv cache size per request: {calculated_kv_cache_size_per_req} GB")
 
 
-    _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req) + _OFFLOAD_DEV
+    _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req, tensor_parallelism) + _OFFLOAD_DEV
+    _cpu_offload = 16.5
     print(f"offloading {_cpu_offload} GB model weights")
 
     llm = LLM(model=model_name,

@@ -1,0 +1,10 @@
+Benchmarking facebook/opt-30b | Prompt Len: 128, Gen Len: 1, Batch Size: 1
+Start time: 2025-08-04 08:39:16.794874
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 763.99it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.31s/it, est. speed input: 29.73 toks/s, output: 0.23 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.31s/it, est. speed input: 29.73 toks/s, output: 0.23 toks/s]
+
+Runtime: 4.308348907 seconds
+Total throughput: 29.941864687515793 tokens/sec
+Generation throughput: 0.23210747819779684 tokens/sec
+
