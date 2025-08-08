@@ -73,6 +73,14 @@ def calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, batch_size):
         num_layers = 48
         hidden_size = 7168
         num_heads = 56
+    elif model_name == "facebook/opt-66b":
+        num_layers = 64
+        hidden_size = 9216
+        num_heads = 72
+    elif model_name == "meta-llama/Llama-2-13b-hf":
+        num_layers = 40
+        hidden_size = 5120
+        num_heads = 40
     else:
         raise ValueError(f"Model '{model_name}' is not supported in this function.")
 
@@ -88,6 +96,7 @@ def calculated_kv_cache_size_GB(model_name, prompt_len, gen_len, batch_size):
     return size_gb
 
 def modify_model_config(model_name, expected_model_len, tp=1):
+    tp = 2
     if tp == 1: 
         if model_name == "facebook/opt-6.7b":
             _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
@@ -96,6 +105,9 @@ def modify_model_config(model_name, expected_model_len, tp=1):
         if model_name == "facebook/opt-30b":
             _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
             # _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
+        if model_name == "facebook/opt-66b":
+            _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-66b/blobs/bf3355ee2a48a23c8379441e0d0832f06118924d"
+
     if tp == 2:
         if model_name == "facebook/opt-6.7b":
             _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-6.7b/blobs/bebe2424fb9fa4e2b5f0b24d7a12d6004553ee6e"
@@ -103,7 +115,10 @@ def modify_model_config(model_name, expected_model_len, tp=1):
             _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
         if model_name == "facebook/opt-30b":
             _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
-        
+        if model_name == "facebook/opt-66b":
+            _config_json = "/dev/shm/.cache/huggingface/models--facebook--opt-66b/blobs/bf3355ee2a48a23c8379441e0d0832f06118924d"
+        if model_name == "meta-llama/Llama-2-13b-hf":
+            _config_json = "/dev/shm/.cache/huggingface/models--meta-llama--Llama-2-13b-hf/blobs/374448aabc223983bce6e8127250846e2acf5cf2"
     with open(_config_json, "r") as f:
         config = json.load(f)
     if expected_model_len > 1024:

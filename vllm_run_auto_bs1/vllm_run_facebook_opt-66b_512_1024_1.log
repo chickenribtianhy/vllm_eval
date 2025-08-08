@@ -1,0 +1,54 @@
+INFO 08-08 15:59:56 [__init__.py:244] Automatically detected platform cuda.
+benchmarking facebook_opt-66b_prompt512_gen1024_bs1
+kv cache size per request: 3.375 GB
+offloading 132 GB model weights
+INFO 08-08 16:00:06 [config.py:823] This model supports multiple tasks: {'embed', 'generate', 'reward', 'classify', 'score'}. Defaulting to 'generate'.
+INFO 08-08 16:00:06 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.1) with config: model='facebook/opt-66b', speculative_config=None, tokenizer='facebook/opt-66b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=1536, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=facebook/opt-66b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 08-08 16:00:08 [cuda.py:275] Cannot use FlashAttention-2 backend for Volta and Turing GPUs.
+INFO 08-08 16:00:08 [cuda.py:324] Using XFormers backend.
+INFO 08-08 16:00:09 [parallel_state.py:1065] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 08-08 16:00:09 [model_runner.py:1171] Starting to load model facebook/opt-66b...
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 119, in <module>
+[rank0]:     benchmark(args.model, args.prompt_len, args.gen_len, args.batch_size, args.tensor_parallelism)
+[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 46, in benchmark
+[rank0]:     llm = LLM(model=model_name,
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 243, in __init__
+[rank0]:     self.llm_engine = LLMEngine.from_engine_args(
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 501, in from_engine_args
+[rank0]:     return engine_cls.from_vllm_config(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 477, in from_vllm_config
+[rank0]:     return cls(
+[rank0]:            ^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 265, in __init__
+[rank0]:     self.model_executor = executor_class(vllm_config=vllm_config)
+[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/executor/executor_base.py", line 53, in __init__
+[rank0]:     self._init_executor()
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/executor/uniproc_executor.py", line 48, in _init_executor
+[rank0]:     self.collective_rpc("load_model")
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/executor/uniproc_executor.py", line 57, in collective_rpc
+[rank0]:     answer = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/utils.py", line 2671, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/worker/worker.py", line 210, in load_model
+[rank0]:     self.model_runner.load_model()
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/worker/model_runner.py", line 1174, in load_model
+[rank0]:     self.model = get_model(vllm_config=self.vllm_config)
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/__init__.py", line 59, in get_model
+[rank0]:     return loader.load_model(vllm_config=vllm_config,
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/base_loader.py", line 41, in load_model
+[rank0]:     self.load_weights(model, model_config)
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/dummy_loader.py", line 27, in load_weights
+[rank0]:     initialize_dummy_weights(model)
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 719, in initialize_dummy_weights
+[rank0]:     param.uniform_(low, high, generator=generator)
+[rank0]: KeyboardInterrupt
+[rank0]:[W808 16:08:55.648625403 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

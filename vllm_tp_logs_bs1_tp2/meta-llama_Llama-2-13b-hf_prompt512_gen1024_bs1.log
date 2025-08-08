@@ -1,0 +1,29 @@
+Benchmarking meta-llama/Llama-2-13b-hf | Prompt Len: 512, Gen Len: 1024, Batch Size: 1
+Start time: 2025-08-08 17:01:20.290897
+
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 780.34it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.99s/it, est. speed input: 18.32 toks/s, output: 36.58 toks/s]Processed prompts: 100%|██████████| 1/1 [00:27<00:00, 27.99s/it, est. speed input: 18.32 toks/s, output: 36.58 toks/s]
+
+Runtime: 27.996724565 seconds
+Total throughput: 54.86356078668568 tokens/sec
+Generation throughput: 36.57570719112379 tokens/sec
+
+============= Metrics =============
+Prefill throughput: 1096.4902738170706 tokens/s
+Decode throughput: 37.202814345472866 tokens/s
+Average TTFT: 0.4696366786956787 s
+Average TPOT: 0.02690596221595682 s
+
+total prefill time: 0.46785640716552734 
+total decode time: 27.524799346923828 
+===================================
+
+1
+RequestMetrics(arrival_time=1754672480.291307, last_token_time=1754672508.285743, first_scheduled_time=1754672480.2930872, first_token_time=1754672480.7609437, time_in_queue=0.0017802715301513672, finished_time=1754672508.2860346, scheduler_time=0.07630064699969807, model_forward_time=None, model_execute_time=None, spec_token_acceptance_counts=[0])
+
+
+
+Outputs:
+[0]: aily м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м bil м 
+
+generation token length: 1024
