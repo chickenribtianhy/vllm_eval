@@ -40,7 +40,7 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
 
 
     # _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req, tensor_parallelism) + _OFFLOAD_DEV
-    _cpu_offload = 15
+    _cpu_offload = 140
     print(f"offloading {_cpu_offload} GB model weights")
 
     llm = LLM(model=model_name,

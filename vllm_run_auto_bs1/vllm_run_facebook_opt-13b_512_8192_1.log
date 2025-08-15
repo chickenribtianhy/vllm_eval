@@ -1,73 +1,133 @@
-INFO 07-18 03:43:56 [__init__.py:244] Automatically detected platform cuda.
+INFO 08-13 17:39:20 [__init__.py:243] Automatically detected platform cuda.
 benchmarking facebook_opt-13b_prompt512_gen8192_bs1
-kv cache size per request: 6.640625 GB
 offloading 19 GB model weights
-INFO 07-18 03:44:11 [config.py:823] This model supports multiple tasks: {'classify', 'embed', 'generate', 'reward', 'score'}. Defaulting to 'generate'.
-INFO 07-18 03:44:12 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.1) with config: model='facebook/opt-13b', speculative_config=None, tokenizer='facebook/opt-13b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=8704, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=facebook/opt-13b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=False, 
-INFO 07-18 03:44:16 [cuda.py:275] Cannot use FlashAttention-2 backend for Volta and Turing GPUs.
-INFO 07-18 03:44:16 [cuda.py:324] Using XFormers backend.
-INFO 07-18 03:44:16 [parallel_state.py:1065] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
-INFO 07-18 03:44:16 [model_runner.py:1171] Starting to load model facebook/opt-13b...
-INFO 07-18 03:45:45 [model_runner.py:1203] Model loading took 4.8624 GiB and 87.728243 seconds
-INFO 07-18 03:45:50 [worker.py:294] Memory profiling takes 5.13 seconds
-INFO 07-18 03:45:50 [worker.py:294] the current vLLM instance can use total_gpu_memory (15.77GiB) x gpu_memory_utilization (0.90) = 14.19GiB
-INFO 07-18 03:45:50 [worker.py:294] model weights take 4.86GiB; non_torch_memory takes 0.12GiB; PyTorch activation peak memory takes 1.59GiB; the rest of the memory reserved for KV Cache is 7.61GiB.
-INFO 07-18 03:45:50 [executor_base.py:113] # cuda blocks: 623, # CPU blocks: 4096
-INFO 07-18 03:45:50 [executor_base.py:118] Maximum concurrency for 8704 tokens per request: 1.15x
-INFO 07-18 03:46:26 [model_runner.py:1513] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
-Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:04<00:26,  4.41s/it]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:08<00:21,  4.37s/it]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:13<00:17,  4.36s/it]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:17<00:13,  4.36s/it]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:21<00:08,  4.35s/it]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:26<00:04,  4.35s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:30<00:00,  4.35s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:30<00:00,  4.36s/it]
-INFO 07-18 03:46:57 [model_runner.py:1671] Graph capturing finished in 31 secs, took 0.69 GiB
-INFO 07-18 03:46:57 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 71.76 seconds
-INFO 07-18 03:47:02 [metrics.py:417] Avg prompt throughput: 86.8 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.3%, CPU KV cache usage: 0.0%.
-INFO 07-18 03:47:08 [metrics.py:417] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.3%, CPU KV cache usage: 0.0%.
-INFO 07-18 03:47:14 [metrics.py:417] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.3%, CPU KV cache usage: 0.0%.
-INFO 07-18 03:47:20 [metrics.py:417] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.3%, CPU KV cache usage: 0.0%.
-INFO 07-18 03:47:26 [metrics.py:417] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.3%, CPU KV cache usage: 0.0%.
-INFO 07-18 03:47:31 [metrics.py:417] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.5%, CPU KV cache usage: 0.0%.
+INFO 08-13 17:39:24 [__init__.py:31] Available plugins for group vllm.general_plugins:
+INFO 08-13 17:39:24 [__init__.py:33] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+INFO 08-13 17:39:24 [__init__.py:36] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 08-13 17:39:34 [config.py:793] This model supports multiple tasks: {'score', 'embed', 'reward', 'generate', 'classify'}. Defaulting to 'generate'.
+INFO 08-13 17:39:34 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.0.2.dev1+g0755d3cc1) with config: model='facebook/opt-13b', speculative_config=None, tokenizer='facebook/opt-13b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=8704, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=facebook/opt-13b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"compile_sizes": [], "inductor_compile_config": {"enable_auto_functionalized_v2": false}, "cudagraph_capture_sizes": [32, 24, 16, 8, 4, 2, 1], "max_capture_size": 32}, use_cached_outputs=False, 
+INFO 08-13 17:39:37 [cuda.py:240] Cannot use FlashAttention-2 backend for Volta and Turing GPUs.
+INFO 08-13 17:39:37 [cuda.py:289] Using XFormers backend.
+INFO 08-13 17:39:38 [parallel_state.py:1064] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 08-13 17:39:38 [model_runner.py:1170] Starting to load model facebook/opt-13b...
+INFO 08-13 17:41:08 [model_runner.py:1202] Model loading took 4.8624 GiB and 90.048339 seconds
+INFO 08-13 17:41:14 [worker.py:291] Memory profiling takes 5.17 seconds
+INFO 08-13 17:41:14 [worker.py:291] the current vLLM instance can use total_gpu_memory (15.77GiB) x gpu_memory_utilization (0.90) = 14.19GiB
+INFO 08-13 17:41:14 [worker.py:291] model weights take 4.86GiB; non_torch_memory takes 0.12GiB; PyTorch activation peak memory takes 1.59GiB; the rest of the memory reserved for KV Cache is 7.61GiB.
+INFO 08-13 17:41:14 [executor_base.py:112] # cuda blocks: 623, # CPU blocks: 0
+INFO 08-13 17:41:14 [executor_base.py:117] Maximum concurrency for 8704 tokens per request: 1.15x
+INFO 08-13 17:41:14 [model_runner.py:1512] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:04<00:26,  4.35s/it]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:08<00:21,  4.32s/it]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:12<00:17,  4.32s/it]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:17<00:12,  4.32s/it]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:21<00:08,  4.31s/it]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:25<00:04,  4.31s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:30<00:00,  4.32s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:30<00:00,  4.32s/it]
+INFO 08-13 17:41:44 [model_runner.py:1670] Graph capturing finished in 30 secs, took 0.69 GiB
+INFO 08-13 17:41:44 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 35.83 seconds
+INFO 08-13 17:41:50 [metrics.py:486] Avg prompt throughput: 88.84012 tokens/s, Avg generation throughput: 0.52055 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.29695%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:41:56 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53097 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.29695%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:01 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53113 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.29695%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:07 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53100 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.29695%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:13 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53109 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.29695%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:18 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53097 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.45746%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:24 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53111 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.45746%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:29 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.45746%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:35 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.45746%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:41 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53095 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.45746%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:46 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53106 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.61798%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:52 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53106 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.61798%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:42:58 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53107 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.61798%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:03 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53090 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.61798%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:09 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.61798%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:15 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53101 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.61798%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:20 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53104 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.77849%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:26 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53093 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.77849%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:32 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53107 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.77849%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:37 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53103 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.77849%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:43 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53109 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.77849%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:49 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53107 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.93900%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:43:54 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53105 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.93900%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:00 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53092 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.93900%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:06 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53099 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.93900%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:11 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53099 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.93900%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:17 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.09952%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:22 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53104 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.09952%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:28 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53105 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.09952%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:34 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53093 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.09952%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:39 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53108 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.09952%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:45 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53098 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.09952%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:51 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.26003%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:44:56 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.26003%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:02 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53104 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.26003%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:08 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53093 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.26003%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:13 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.26003%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:19 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53098 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.42055%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:25 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.42055%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:30 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53090 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.42055%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:36 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53102 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.42055%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:42 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53100 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.42055%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:47 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53104 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.58106%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:53 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53093 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.58106%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:45:59 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53099 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.58106%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:04 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53091 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.58106%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:10 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53099 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.58106%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:15 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53106 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.58106%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:21 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53099 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.74157%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:27 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53097 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.74157%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:32 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53111 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.74157%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:38 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53111 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.74157%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:44 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53103 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.74157%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:49 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53091 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.90209%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:46:55 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53106 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.90209%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:01 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53091 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.90209%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:06 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53101 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.90209%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:12 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53093 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.90209%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:18 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53095 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.06260%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:23 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53087 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.06260%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:29 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53105 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.06260%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:35 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53098 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.06260%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:40 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53101 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.06260%, CPU KV cache usage: 0.00000%.
+INFO 08-13 17:47:46 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.53094 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.06260%, CPU KV cache usage: 0.00000%.
 [rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 118, in <module>
+[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 119, in <module>
 [rank0]:     benchmark(args.model, args.prompt_len, args.gen_len, args.batch_size, args.tensor_parallelism)
-[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 66, in benchmark
+[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 67, in benchmark
 [rank0]:     responses = llm.generate(prompts, sampling_params)
 [rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/utils.py", line 1267, in inner
+[rank0]:   File "/home/ubuntu/vllm/vllm/utils.py", line 1218, in inner
 [rank0]:     return fn(*args, **kwargs)
 [rank0]:            ^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 474, in generate
+[rank0]:   File "/home/ubuntu/vllm/vllm/entrypoints/llm.py", line 481, in generate
 [rank0]:     outputs = self._run_engine(use_tqdm=use_tqdm)
 [rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 1517, in _run_engine
+[rank0]:   File "/home/ubuntu/vllm/vllm/entrypoints/llm.py", line 1476, in _run_engine
 [rank0]:     step_outputs = self.llm_engine.step()
 [rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 1352, in step
+[rank0]:   File "/home/ubuntu/vllm/vllm/engine/llm_engine.py", line 1393, in step
 [rank0]:     outputs = self.model_executor.execute_model(
 [rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/executor/executor_base.py", line 141, in execute_model
+[rank0]:   File "/home/ubuntu/vllm/vllm/executor/executor_base.py", line 140, in execute_model
 [rank0]:     output = self.collective_rpc("execute_model",
 [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/executor/uniproc_executor.py", line 57, in collective_rpc
+[rank0]:   File "/home/ubuntu/vllm/vllm/executor/uniproc_executor.py", line 56, in collective_rpc
 [rank0]:     answer = run_method(self.driver_worker, method, args, kwargs)
 [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/utils.py", line 2671, in run_method
+[rank0]:   File "/home/ubuntu/vllm/vllm/utils.py", line 2605, in run_method
 [rank0]:     return func(*args, **kwargs)
 [rank0]:            ^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/worker/worker_base.py", line 421, in execute_model
+[rank0]:   File "/home/ubuntu/vllm/vllm/worker/worker_base.py", line 420, in execute_model
 [rank0]:     output = self.model_runner.execute_model(
 [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:   File "/home/ubuntu/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
 [rank0]:     return func(*args, **kwargs)
 [rank0]:            ^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/worker/model_runner.py", line 1906, in execute_model
+[rank0]:   File "/home/ubuntu/vllm/vllm/worker/model_runner.py", line 1906, in execute_model
 [rank0]:     output: SamplerOutput = self.sampler(
 [rank0]:                             ^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:   File "/home/ubuntu/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
 [rank0]:     return self._call_impl(*args, **kwargs)
 [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:   File "/home/ubuntu/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
 [rank0]:     return forward_call(*args, **kwargs)
 [rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/layers/sampler.py", line 281, in forward
+[rank0]:   File "/home/ubuntu/vllm/vllm/model_executor/layers/sampler.py", line 280, in forward
 [rank0]:     logits = logits.to(torch.float)
 [rank0]:              ^^^^^^^^^^^^^^^^^^^^^^
 [rank0]: KeyboardInterrupt
-[rank0]:[W718 03:47:34.832939957 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W813 17:47:52.216050588 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

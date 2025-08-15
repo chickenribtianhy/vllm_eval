@@ -1,5 +1,5 @@
 Benchmarking meta-llama/Llama-2-13b-hf | Prompt Len: 512, Gen Len: 1024, Batch Size: 1
-Start time: 2025-08-08 17:21:33.395042
+Start time: 2025-08-15 10:14:41.095105
 
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 867.49it/s]
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 982.27it/s]
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]
