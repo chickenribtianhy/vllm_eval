@@ -28,9 +28,10 @@ PYTHON_EXEC=/home/ubuntu/.venv/bin/python
 # gen_lengths=(8192 )
 # batch_sizes=(1)
 
-models=("meta-llama/Llama-2-70b-hf")
+# models=("meta-llama/Llama-2-70b-hf")
+models=("facebook/opt-66b")
 prompt_lengths=(1024 )
-gen_lengths=(1024 )
+gen_lengths=(2048 )
 batch_sizes=(1)
 
 # models=("facebook/opt-30b")
@@ -39,7 +40,7 @@ batch_sizes=(1)
 # batch_sizes=(1)
 
 
-tensor_parallelism=1
+tensor_parallelism=2
 
 for model in "${models[@]}"; do
     model_safe=${model//\//_}
@@ -53,7 +54,7 @@ for model in "${models[@]}"; do
                     --gen_len "$gen_len" \
                     --batch_size "$batch_size" \
                     --tensor_parallelism "$tensor_parallelism" \
-                    > vllm_run_auto_bs1/vllm_run_${model_safe}_${prompt_len}_${gen_len}_${batch_size}.log \
+                    > vllm_run_auto_bs1_tp2/vllm_run_${model_safe}_${prompt_len}_${gen_len}_${batch_size}.log \
                     2>&1 
             done
         done

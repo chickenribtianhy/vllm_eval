@@ -1,0 +1,66 @@
+INFO 08-15 16:59:10 [__init__.py:243] Automatically detected platform cuda.
+benchmarking facebook_opt-66b_prompt1024_gen2048_bs1
+kv cache size per request: 6.75 GB
+offloading 52 GB model weights
+INFO 08-15 16:59:14 [__init__.py:31] Available plugins for group vllm.general_plugins:
+INFO 08-15 16:59:14 [__init__.py:33] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+INFO 08-15 16:59:14 [__init__.py:36] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+Traceback (most recent call last):
+  File "/home/ubuntu/vllm_eval/main.py", line 119, in <module>
+    benchmark(args.model, args.prompt_len, args.gen_len, args.batch_size, args.tensor_parallelism)
+  File "/home/ubuntu/vllm_eval/main.py", line 46, in benchmark
+    llm = LLM(model=model_name,
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/utils.py", line 1183, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/entrypoints/llm.py", line 253, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/engine/llm_engine.py", line 494, in from_engine_args
+    vllm_config = engine_args.create_engine_config(usage_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/engine/arg_utils.py", line 983, in create_engine_config
+    model_config = self.create_model_config()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/engine/arg_utils.py", line 875, in create_model_config
+    return ModelConfig(
+           ^^^^^^^^^^^^
+  File "<string>", line 42, in __init__
+  File "/home/ubuntu/vllm/vllm/config.py", line 583, in __post_init__
+    self.multimodal_config = self._init_multimodal_config()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/config.py", line 651, in _init_multimodal_config
+    if self.registry.is_multimodal_model(self.architectures):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/model_executor/models/registry.py", line 512, in is_multimodal_model
+    model_cls, _ = self.inspect_model_cls(architectures)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/model_executor/models/registry.py", line 468, in inspect_model_cls
+    model_info = self._try_inspect_model_cls(arch)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/model_executor/models/registry.py", line 441, in _try_inspect_model_cls
+    return _try_inspect_model_cls(model_arch, self.models[model_arch])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/model_executor/models/registry.py", line 361, in _try_inspect_model_cls
+    return model.inspect_model_cls()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/model_executor/models/registry.py", line 332, in inspect_model_cls
+    return _run_in_subprocess(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/vllm/vllm/model_executor/models/registry.py", line 588, in _run_in_subprocess
+    returned = subprocess.run(_SUBPROCESS_COMMAND,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

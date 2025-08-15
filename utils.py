@@ -129,6 +129,8 @@ def modify_model_config(model_name, expected_model_len, tp=1):
             _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
     if model_name == "facebook/opt-30b":
             _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-30b/blobs/235a014b573b6a338c37f0058429bbf1f1b8a081"
+    if model_name == "facebook/opt-66b":
+            _config_json = "/home/ubuntu/.cache/huggingface/models--facebook--opt-13b/blobs/d66132763e510905b39cbad4d7fd1b666a185e50"
     if model_name == "meta-llama/Llama-2-13b-hf":
         _config_json = "/home/ubuntu/.cache/huggingface/models--meta-llama--Llama-2-13b-hf/blobs/374448aabc223983bce6e8127250846e2acf5cf2"
     if model_name == "meta-llama/Llama-2-70b-hf":
