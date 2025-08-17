@@ -1,5 +1,5 @@
 Benchmarking facebook/opt-66b | Prompt Len: 1024, Gen Len: 1024, Batch Size: 1
-Start time: 2025-08-15 16:52:34.540965
+Start time: 2025-08-17 06:13:08.315398
 
-Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 421.24it/s]
+Adding requests:   0%|          | 0/1 [00:00<?, ?it/s]Adding requests: 100%|██████████| 1/1 [00:00<00:00, 434.73it/s]
 Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]

@@ -28,10 +28,10 @@ PYTHON_EXEC=/home/ubuntu/.venv/bin/python
 # gen_lengths=(8192 )
 # batch_sizes=(1)
 
-# models=("meta-llama/Llama-2-70b-hf")
-models=("facebook/opt-66b")
+models=("meta-llama/Llama-2-13b-hf")
+# models=("facebook/opt-66b")
 prompt_lengths=(1024 )
-gen_lengths=(2048 )
+gen_lengths=(4096 )
 batch_sizes=(1)
 
 # models=("facebook/opt-30b")

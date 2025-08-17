@@ -42,8 +42,17 @@ INFO 08-15 16:51:14 [executor_base.py:112] # cuda blocks: 151, # CPU blocks: 0
 INFO 08-15 16:51:14 [executor_base.py:117] Maximum concurrency for 2048 tokens per request: 1.18x
 INFO 08-15 16:51:14 [model_runner.py:1512] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
 [1;36m(VllmWorkerProcess pid=60514)[0;0m INFO 08-15 16:51:14 [model_runner.py:1512] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
-Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:11<01:08, 11.45s/it]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:22<00:57, 11.41s/it]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:34<00:45, 11.40s/it]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:45<00:34, 11.43s/it]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:57<00:22, 11.40s/it]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [01:08<00:11, 11.37s/it][1;36m(VllmWorkerProcess pid=60514)[0;0m INFO 08-15 16:52:34 [model_runner.py:1670] Graph capturing finished in 80 secs, took 1.07 GiB
-Capturing CUDA graph shapes: 100%|██████████| 7/7 [01:19<00:00, 11.38s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [01:19<00:00, 11.39s/it]
+
+Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]
+Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:11<01:08, 11.45s/it]
+Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:22<00:57, 11.41s/it]
+Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:34<00:45, 11.40s/it]
+Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:45<00:34, 11.43s/it]
+Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:57<00:22, 11.40s/it]
+Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [01:08<00:11, 11.37s/it][1;36m(VllmWorkerProcess pid=60514)[0;0m INFO 08-15 16:52:34 [model_runner.py:1670] Graph capturing finished in 80 secs, took 1.07 GiB
+
+Capturing CUDA graph shapes: 100%|██████████| 7/7 [01:19<00:00, 11.38s/it]
+Capturing CUDA graph shapes: 100%|██████████| 7/7 [01:19<00:00, 11.39s/it]
 INFO 08-15 16:52:34 [model_runner.py:1670] Graph capturing finished in 80 secs, took 1.07 GiB
 INFO 08-15 16:52:34 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 89.90 seconds
 INFO 08-15 16:52:46 [metrics.py:486] Avg prompt throughput: 84.62243 tokens/s, Avg generation throughput: 0.08264 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 43.04636%, CPU KV cache usage: 0.00000%.
