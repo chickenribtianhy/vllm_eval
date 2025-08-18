@@ -16,7 +16,7 @@ os.environ["VLLM_USE_V1"] = "0"
 base_prompt = "Paris is the capital of "
 
 # log_dir = "./vllm_tp_logs_bs1"
-log_dir = "./vllm_tp_logs_bs1_tp2"
+log_dir = "./vllm_tp_logs_bs1_aws"
 
 os.makedirs(log_dir, exist_ok=True)
 
@@ -40,7 +40,7 @@ def benchmark(model_name, prompt_len, gen_len, batch_size, tensor_parallelism):
 
 
     # _cpu_offload = estimate_cpu_offload(model_name, calculated_kv_cache_size_per_req, tensor_parallelism) + _OFFLOAD_DEV
-    _cpu_offload = 1
+    _cpu_offload = 51
     print(f"offloading {_cpu_offload} GB model weights")
 
     llm = LLM(model=model_name,

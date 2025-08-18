@@ -1,0 +1,98 @@
+INFO 08-18 01:20:40 [__init__.py:243] Automatically detected platform cuda.
+benchmarking facebook_opt-30b_prompt512_gen4096_bs1
+kv cache size per request: 5.90625 GB
+offloading 45 GB model weights
+INFO 08-18 01:20:42 [__init__.py:31] Available plugins for group vllm.general_plugins:
+INFO 08-18 01:20:42 [__init__.py:33] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+INFO 08-18 01:20:42 [__init__.py:36] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+INFO 08-18 01:20:50 [config.py:793] This model supports multiple tasks: {'embed', 'score', 'classify', 'reward', 'generate'}. Defaulting to 'generate'.
+INFO 08-18 01:20:50 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.0.2.dev1+g0755d3cc1) with config: model='facebook/opt-30b', speculative_config=None, tokenizer='facebook/opt-30b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=4608, download_dir=None, load_format=LoadFormat.DUMMY, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=None, served_model_name=facebook/opt-30b, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"compile_sizes": [], "inductor_compile_config": {"enable_auto_functionalized_v2": false}, "cudagraph_capture_sizes": [32, 24, 16, 8, 4, 2, 1], "max_capture_size": 32}, use_cached_outputs=False, 
+INFO 08-18 01:20:51 [cuda.py:292] Using Flash Attention backend.
+INFO 08-18 01:20:52 [parallel_state.py:1064] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 08-18 01:20:52 [model_runner.py:1170] Starting to load model facebook/opt-30b...
+INFO 08-18 01:24:06 [model_runner.py:1202] Model loading took 10.7850 GiB and 193.832557 seconds
+INFO 08-18 01:24:14 [worker.py:291] Memory profiling takes 8.41 seconds
+INFO 08-18 01:24:14 [worker.py:291] the current vLLM instance can use total_gpu_memory (21.98GiB) x gpu_memory_utilization (0.90) = 19.78GiB
+INFO 08-18 01:24:14 [worker.py:291] model weights take 10.78GiB; non_torch_memory takes 0.18GiB; PyTorch activation peak memory takes 1.90GiB; the rest of the memory reserved for KV Cache is 6.91GiB.
+INFO 08-18 01:24:14 [executor_base.py:112] # cuda blocks: 337, # CPU blocks: 0
+INFO 08-18 01:24:14 [executor_base.py:117] Maximum concurrency for 4608 tokens per request: 1.17x
+INFO 08-18 01:24:14 [model_runner.py:1512] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:07<00:47,  7.90s/it]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:15<00:39,  7.88s/it]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:23<00:31,  7.87s/it]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:31<00:23,  7.87s/it]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:39<00:15,  7.86s/it]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:47<00:07,  7.86s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:55<00:00,  7.86s/it]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:55<00:00,  7.86s/it]
+INFO 08-18 01:25:09 [model_runner.py:1670] Graph capturing finished in 55 secs, took 1.25 GiB
+INFO 08-18 01:25:09 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 63.92 seconds
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+INFO 08-18 01:25:18 [metrics.py:486] Avg prompt throughput: 64.09825 tokens/s, Avg generation throughput: 0.25038 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:25:25 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:25:32 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26863 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:25:40 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26869 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:25:47 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26864 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:25:55 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26867 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:02 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26863 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:10 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.79228%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:17 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:25 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:32 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:39 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:47 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:26:54 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26865 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:02 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26865 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:09 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26870 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.08902%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:17 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.38576%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:24 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26868 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.38576%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:32 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.38576%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:39 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26866 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.38576%, CPU KV cache usage: 0.00000%.
+INFO 08-18 01:27:46 [metrics.py:486] Avg prompt throughput: 0.00000 tokens/s, Avg generation throughput: 0.26861 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 10.38576%, CPU KV cache usage: 0.00000%.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 119, in <module>
+[rank0]:     benchmark(args.model, args.prompt_len, args.gen_len, args.batch_size, args.tensor_parallelism)
+[rank0]:   File "/home/ubuntu/vllm_eval/main.py", line 67, in benchmark
+[rank0]:     responses = llm.generate(prompts, sampling_params)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/utils.py", line 1218, in inner
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/entrypoints/llm.py", line 481, in generate
+[rank0]:     outputs = self._run_engine(use_tqdm=use_tqdm)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/entrypoints/llm.py", line 1476, in _run_engine
+[rank0]:     step_outputs = self.llm_engine.step()
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/engine/llm_engine.py", line 1393, in step
+[rank0]:     outputs = self.model_executor.execute_model(
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/executor/executor_base.py", line 140, in execute_model
+[rank0]:     output = self.collective_rpc("execute_model",
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/executor/uniproc_executor.py", line 56, in collective_rpc
+[rank0]:     answer = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/utils.py", line 2605, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/worker/worker_base.py", line 420, in execute_model
+[rank0]:     output = self.model_runner.execute_model(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/worker/model_runner.py", line 1906, in execute_model
+[rank0]:     output: SamplerOutput = self.sampler(
+[rank0]:                             ^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ubuntu/vllm/vllm/model_executor/layers/sampler.py", line 280, in forward
+[rank0]:     logits = logits.to(torch.float)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt
+[rank0]:[W818 01:27:54.050841134 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
